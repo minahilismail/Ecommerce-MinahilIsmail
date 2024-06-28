@@ -1,0 +1,24 @@
+/* carousel.css */
+
+.slick-slide {
+  padding: 0 10px; /* Adjust the padding to add space between the slides */
+}
+.slick-dots ul {
+  margin-top: 20px;
+}
+
+.slick-dots li button {
+  border: 1px solid #adadad;
+  border-radius: 100%;
+}
+
+.slick-dots li button:before {
+  color: transparent; /* Default dot color */
+  background-color: transparent;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #eda415; /* Active dot color */
+  background-color: #eda415;
+  border-radius: 100%;
+}
