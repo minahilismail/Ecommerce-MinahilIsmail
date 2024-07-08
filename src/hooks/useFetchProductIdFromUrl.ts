@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useAppSelector } from "./hooks";
-import { CartItem } from "../types/types";
+import { CART_ITEM } from "../types/types";
 
 const useFetchProductIdFromUrl = (): [
-  CartItem | undefined,
+  CART_ITEM | undefined,
   number | undefined
 ] => {
   const { productId } = useParams<{ productId: string }>();

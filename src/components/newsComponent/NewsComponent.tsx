@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
-import { News } from "../../types/types";
+import { NEWS } from "../../types/types";
 import news1 from "../../assets/news1.png";
 import news2 from "../../assets/news2.png";
 
-const newsList: News[] = [
+const newsList: NEWS[] = [
   {
     date: "22,oct,2021",
     image: news1,

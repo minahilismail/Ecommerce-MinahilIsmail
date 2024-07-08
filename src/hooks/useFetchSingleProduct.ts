@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { ProductItem } from "../types/types";
+import { PRODUCT_ITEM } from "../types/types";
 import axios from "axios";
 import useFetchProductIdFromUrl from "./useFetchProductIdFromUrl";
 
 const useFetchSingleProducts = (
   url: string
 ): [
-  ProductItem | null,
+  PRODUCT_ITEM | null,
   number,
   React.Dispatch<React.SetStateAction<number>>
 ] => {
   const [productInCart, productIdNum] = useFetchProductIdFromUrl();
-  const [product, setProduct] = useState<ProductItem | null>(null);
+  const [product, setProduct] = useState<PRODUCT_ITEM | null>(null);
 
   const [quantityCount, setQuantityCount] = useState<number>(
     productInCart?.quantity || 0

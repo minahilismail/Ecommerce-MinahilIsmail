@@ -1,7 +1,7 @@
 import { CloseCircle } from "iconsax-react";
 import { ArrowDown2 } from "iconsax-react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { CartItem } from "../../types/types";
+import { CART_ITEM } from "../../types/types";
 import {
   adjustQuantity,
   remove,
@@ -12,7 +12,7 @@ const CartProductDetails: React.FC = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state?.cart);
 
-  const removeFromCart = (product: CartItem) => {
+  const removeFromCart = (product: CART_ITEM) => {
     dispatch(remove(product));
   };
 

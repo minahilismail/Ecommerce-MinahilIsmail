@@ -3,7 +3,7 @@ import { Heart } from "iconsax-react";
 import { Google } from "iconsax-react";
 import { Facebook } from "iconsax-react";
 import { Whatsapp } from "iconsax-react";
-import { ProductItem } from "../../types/types";
+import { PRODUCT_ITEM } from "../../types/types";
 import { useAppDispatch } from "../../hooks/hooks";
 import { add } from "../../redux/slices/cartSlice";
 import useFetchSingleProducts from "../../hooks/useFetchSingleProduct";
@@ -17,7 +17,7 @@ const ProductDetails: React.FC = () => {
     `https://fakestoreapi.com/products/${productIdNum}`
   );
 
-  const addToCart = (product: ProductItem) => {
+  const addToCart = (product: PRODUCT_ITEM) => {
     if (quantityCount === 0) return;
     const productWithQuantity = { ...product, quantity: quantityCount };
     dispatch(add(productWithQuantity));

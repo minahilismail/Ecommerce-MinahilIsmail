@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import useFetchFilteredProducts from "./useFetchFilteredProducts";
-import { ProductItem } from "../types/types";
+import { PRODUCT_ITEM } from "../types/types";
 
 const useFetchMultiFilteredProducts = (
   url: string
 ): [
   string[],
   React.Dispatch<React.SetStateAction<string[]>>,
-  ProductItem[],
+  PRODUCT_ITEM[],
   (selectedCategory: string) => void,
   () => void
 ] => {

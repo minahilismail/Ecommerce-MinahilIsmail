@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { ProductItem } from "../types/types";
+import { PRODUCT_ITEM } from "../types/types";
 import axios from "axios";
 
 const useFetchSingleFilterProducts = (
   url: string
-): [ProductItem[], (selectedCategory: string) => void] => {
-  const [catPro, setCategoriesProducts] = useState<ProductItem[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<ProductItem[]>([]);
+): [PRODUCT_ITEM[], (selectedCategory: string) => void] => {
+  const [catPro, setCategoriesProducts] = useState<PRODUCT_ITEM[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<PRODUCT_ITEM[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
   useEffect(() => {

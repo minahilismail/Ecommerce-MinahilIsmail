@@ -1,4 +1,4 @@
-export type ProductItem = {
+export type PRODUCT_ITEM = {
   category: string;
   description: string;
   id: number;
@@ -12,7 +12,7 @@ export type ProductItem = {
   };
 };
 
-export type CartItem = {
+export type CART_ITEM = {
   category: string;
   id: number;
   image: string;
@@ -21,7 +21,7 @@ export type CartItem = {
   quantity: number;
 };
 
-export type News = {
+export type NEWS = {
   date: string;
   image: string;
   title: string;
@@ -29,12 +29,12 @@ export type News = {
   company: string;
 };
 
-export type UserReview = {
+export type USER_REVIEW = {
   fullName: string;
   image: string;
   review: string;
 };
 
-export type starRating = {
+export type STAR_RATING = {
   stars: number;
 };

@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
-import { UserReview } from "../../types/types";
+import { USER_REVIEW } from "../../types/types";
 import user1 from "../../assets/user1.png";
 import user2 from "../../assets/user2.png";
 import user3 from "../../assets/user3.png";
 
-const reviews: UserReview[] = [
+const reviews: USER_REVIEW[] = [
   {
     fullName: "Alice Johnson",
     image: user1,

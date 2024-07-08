@@ -1,8 +1,8 @@
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { AiOutlineStar } from "react-icons/ai";
-import { starRating } from "../../types/types";
+import { STAR_RATING } from "../../types/types";
 
-const Star: React.FC<starRating> = ({ stars }) => {
+const Star: React.FC<STAR_RATING> = ({ stars }) => {
   const ratingStar = Array.from({ length: 5 }, (_, index) => {
     let num: number = index + 0.5;
 
