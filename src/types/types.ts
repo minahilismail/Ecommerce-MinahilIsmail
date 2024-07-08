@@ -38,3 +38,11 @@ export type USER_REVIEW = {
 export type STAR_RATING = {
   stars: number;
 };
+
+export type CHECKBOX_FILTER_PROPS= {
+  id: string;
+  label: string;
+  isChecked: boolean;
+  count?: number;
+  onClick: () => void;
+}

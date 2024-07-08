@@ -1,4 +1,4 @@
-import CartProductDetails from "../components/cart/CartProductDetails";
+import CartProductDetails from "../components/cart/Cart";
 function CartPage() {
   return (
     <>

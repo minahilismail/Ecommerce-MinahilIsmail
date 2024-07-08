@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
-import BrowseCategory from "../categories/BrowseCategories";
+import BrowseCategory from "../browseCategories/BrowseCategories";
 const RootLayout: React.FC = () => {
   return (
     <div>
