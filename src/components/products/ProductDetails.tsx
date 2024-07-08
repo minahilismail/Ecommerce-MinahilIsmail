@@ -53,30 +53,30 @@ const ProductDetails: React.FC = () => {
             <div className="text-navColor font-medium md:text-[29.68px] text-[25px]  leading-[44px] mb-[11px]">
               {product?.title}
             </div>
-            <div className="text-[#4A4A4A] font-medium md:text-[29.68px] text-[25px] leading-[44px]">
+            <div className="text-textClr1 font-medium md:text-[29.68px] text-[25px] leading-[44px]">
               ${product?.price}
             </div>
             <div className="flex gap-[9.67px]">
-              <div className="text-[#D4A80A]">
+              <div className="text-brandYellowClr">
                 <Star stars={product?.rating?.rate} />
               </div>
-              <div className="text-[#4A4A4A] text-[13.19px] font-medium">
+              <div className="text-textClr1 text-[13.19px] font-medium">
                 {product?.rating?.count} reviews
               </div>
             </div>
             <div className="flex gap-[19.08px] items-center">
-              <div className="text-[#232323] text-[18.17px] font-medium">
+              <div className="text-productAttribute1 text-[18.17px] font-medium">
                 Availability
               </div>
-              <div className="text-[#30BD57] text-[18.17px] font-medium">
+              <div className="text-productAttributeGreen text-[18.17px] font-medium">
                 In stock
               </div>
             </div>
-            <div className="text-[#5D5D5D] text-[15.93px]">
+            <div className="text-brownClr text-[15.93px]">
               Hurry up only {34} products left in stock!
             </div>
           </div>
-          <hr className="mb-[40px] h-[1px] bg-[#BDBDBD]" />
+          <hr className="mb-[40px] h-[1px] bg-borderColor" />
 
           <div className="flex flex-col gap-[42px]">
             <div className="flex items-center gap-[19.08px]">
@@ -108,16 +108,16 @@ const ProductDetails: React.FC = () => {
               <div className="flex items-center">
                 <button
                   onClick={handleDecrement}
-                  className="flex items-center justify-center h-[32px] w-[35px] border border-[#BDBDBD]"
+                  className="flex items-center justify-center h-[32px] w-[35px] border border-borderColor"
                 >
                   -
                 </button>
-                <div className="flex items-center justify-center h-[32px] w-[63px] border border-[#BDBDBD]">
+                <div className="flex items-center justify-center h-[32px] w-[63px] border border-borderColor">
                   {quantityCount}
                 </div>
                 <button
                   onClick={handleIncrement}
-                  className="flex items-center justify-center h-[32px] w-[35px] border border-[#BDBDBD]"
+                  className="flex items-center justify-center h-[32px] w-[35px] border border-borderColor"
                 >
                   +
                 </button>
@@ -135,31 +135,31 @@ const ProductDetails: React.FC = () => {
                 Buy it now
               </button>
               <button className=" hidden md:flex items-center justify-center md:h-[73px] md:w-[74px] font-semibold">
-                <Heart color="#292D32" className="h-[36px] w-[36px]" />
+                <Heart color="heartColor" className="h-[36px] w-[36px]" />
               </button>
             </div>
           </div>
 
-          <div className="mt-[25px] mb-[15px] h-[1px] bg-[#BDBDBD]"></div>
+          <div className="mt-[25px] mb-[15px] h-[1px] bg-borderColor"></div>
 
           <div className="flex flex-col gap-[31px]">
-            <div className="flex items-center gap-[19.08px] text-[#232323] text-[18.17px] font-medium">
+            <div className="flex items-center gap-[19.08px] text-productAttribute1 text-[18.17px] font-medium">
               <div>Sku: </div>
               <div>01133-9-9</div>
             </div>
             <div className="flex items-center gap-[19.08px]">
-              <div className="text-[#232323] text-[18.17px] font-medium">
+              <div className="text-productAttribute1 text-[18.17px] font-medium">
                 Category:{" "}
               </div>
-              <div className="text-[#434343] text-[13.17px]">20% off</div>
-              <div className="text-[#434343] text-[13.17px]">49% off</div>
-              <div className="text-[#434343] text-[13.17px]">
+              <div className="text-saleColor text-[13.17px]">20% off</div>
+              <div className="text-saleColor text-[13.17px]">49% off</div>
+              <div className="text-saleColor text-[13.17px]">
                 {product?.category}
               </div>
             </div>
 
             <div className="flex items-center gap-[19.08px]">
-              <div className="text-[#232323] text-[18.17px] font-medium">
+              <div className="text-productAttribute1 text-[18.17px] font-medium">
                 Share:{" "}
               </div>
               <div>
@@ -177,7 +177,7 @@ const ProductDetails: React.FC = () => {
       </div>
 
       <div className="flex md:gap-[20px] gap-[10px] items-center md:justify-center justify-start mt-[78px] mb-[35px]">
-        <button className="md:rounded-[15px] rounded-[10px] text-[#373737] text-[15.68px] md:text-[20.68px] leading-[31.02px] flex items-center justify-center font-medium md:px-[34px] md:py-[14.5px] px-[10px] py-[5px] border border-[#8F8F8F]">
+        <button className="md:rounded-[15px] rounded-[10px] text-descColor text-[15.68px] md:text-[20.68px] leading-[31.02px] flex items-center justify-center font-medium md:px-[34px] md:py-[14.5px] px-[10px] py-[5px] border border-borderClr4">
           Description
         </button>
         <button className="md:rounded-[15px] rounded-[10px] bg-navColor text-white text-[15.68px] md:text-[20.68px] leading-[31.02px] flex items-center justify-center font-medium md:px-[51px] md:py-[14.5px] px-[20px] py-[5px] ">
@@ -185,7 +185,7 @@ const ProductDetails: React.FC = () => {
         </button>
       </div>
 
-      <div className="md:mb-[64px] mb-[10px] border rounded-[20px] border-[#B8B8B8] md:py-[25.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
+      <div className="md:mb-[64px] mb-[10px] border rounded-[20px] border-borderClr5 md:py-[25.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
         <div>Customer reviews</div>
         <div>No reviews yet</div>
         <button className="bg-navColor text-white underline flex items-center justify-center px-[20px] py-[5px]">

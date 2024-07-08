@@ -18,7 +18,7 @@ const PopularProducts: React.FC = () => {
     <div
       onClick={() => handleFilterButtonClick(category)}
       key={i++}
-      className="py-[10px] cursor-pointer mb-[32px] relative items-center justify-center text-secondary text-[16.38px] font-medium flex gap-[13px] border border-[#B5B5B5] overflow-hidden truncate shadow-lg mx-auto rounded-3xl"
+      className="py-[10px] cursor-pointer mb-[32px] relative items-center justify-center text-secondary text-[16.38px] font-medium flex gap-[13px] border border-borderClr3 overflow-hidden truncate shadow-lg mx-auto rounded-3xl"
     >
       {category}
     </div>
@@ -46,7 +46,7 @@ const PopularProducts: React.FC = () => {
   const catProCards = filteredProducts?.map((product) => (
     <div
       key={product?.id}
-      className="relative rounded-2xl p-6 border border-[#A5A5A5] overflow-hidden shadow-lg flex flex-col justify-between"
+      className="relative rounded-2xl p-6 border border-borderClr2 overflow-hidden shadow-lg flex flex-col justify-between"
       style={{ height: "305px" }}
     >
       <div className="space-y-4 sm:space-y-[43.35px]">
@@ -61,7 +61,7 @@ const PopularProducts: React.FC = () => {
 
         <div className="flex flex-col text-left justify-start gap-[15.74px] text-secondary max-w-[188px]">
           <div className="font-semibold truncate">{product?.title}</div>
-          <div className="font-semibold text-[#4A4A4A] text-[17.09px]">
+          <div className="font-semibold text-textClr1 text-[17.09px]">
             ${product.price}
           </div>
 
@@ -105,9 +105,9 @@ const PopularProducts: React.FC = () => {
           {catProCards}
         </div>
         <div className="flex items-center justify-center mb-5 gap-2 mt-[49px]">
-          <div className="h-[16px] w-[16px] border border-[#ADADAD] bg-primary rounded-full "></div>
-          <div className="h-[16px] w-[16px] border border-[#ADADAD] rounded-full "></div>
-          <div className="h-[16px] w-[16px] border border-[#ADADAD] rounded-full "></div>
+          <div className="h-[16px] w-[16px] border border-carouselDotsClr bg-primary rounded-full "></div>
+          <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
+          <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
         </div>
       </div>
     </>

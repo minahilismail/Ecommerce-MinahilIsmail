@@ -66,7 +66,7 @@ const NewsComponent: React.FC = () => {
         {newsList.map((news, index) => (
           <div
             key={index}
-            className=" border border-[#BABABA] rounded-[20px] p-[16.83px]"
+            className=" border border-reviewBorder rounded-[20px] p-[16.83px]"
           >
             <div className="lg:flex gap-[34px]">
               <img

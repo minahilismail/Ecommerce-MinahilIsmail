@@ -30,13 +30,13 @@ const CategorySidebar: React.FC = () => {
           readOnly
         />
         <label
-          className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+          className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
           htmlFor={`cat-${index}`}
         >
           {category}
         </label>
       </div>
-      <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+      <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
         {productCounts[category]}
       </div>
     </div>
@@ -46,7 +46,7 @@ const CategorySidebar: React.FC = () => {
     <Link
       to={`/product/${product.id}`}
       key={product.id}
-      className="relative rounded-2xl p-6 border border-[#A5A5A5] overflow-hidden shadow-lg mx-auto"
+      className="relative rounded-2xl p-6 border border-borderClr2 overflow-hidden shadow-lg mx-auto"
       style={{ width: "300px", height: "305px" }}
     >
       <div className="space-y-4 sm:space-y-[43.35px]">
@@ -61,7 +61,7 @@ const CategorySidebar: React.FC = () => {
 
         <div className="flex flex-col text-left justify-start gap-[15.74px] text-secondary max-w-[188px]">
           <div className="font-semibold truncate">{product.title}</div>
-          <div className="font-semibold text-[#4A4A4A] text-[17.09px]">
+          <div className="font-semibold text-textClr1 text-[17.09px]">
             ${product.price}
           </div>
           <div className="font-semibold text-border1">
@@ -85,7 +85,7 @@ const CategorySidebar: React.FC = () => {
             </div>
             <div
               onClick={resetFilters}
-              className="cursor-pointer text-[#595959] text-[15.09px] font-normal leading-[22.64px]"
+              className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]"
             >
               Reset
             </div>
@@ -102,28 +102,28 @@ const CategorySidebar: React.FC = () => {
               />
               <label
                 htmlFor="allCat"
-                className="text-nowrap text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+                className="text-nowrap text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
               >
                 All Categories
               </label>
             </div>
-            <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+            <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
               {categories.length}
             </div>
           </div>
 
           {category}
-          <hr className="mb-[13px] mt-[26px] h-[2px] bg-[#BDBDBD]" />
+          <hr className="mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
 
           <div className="hidden lg:flex flex-col gap-[12px]">
             <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
               Availability
             </div>
             <div className="flex items-center justify-between">
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 0 selected
               </div>
-              <div className="text-[#595959] text-[15.09px] font-normal leading-[22.64px]">
+              <div className="text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
                 Reset
               </div>
             </div>
@@ -137,12 +137,12 @@ const CategorySidebar: React.FC = () => {
                 />
                 <label
                   htmlFor="inStock"
-                  className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+                  className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
                 >
                   In stock
                 </label>
               </div>
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 5
               </div>
             </div>
@@ -157,27 +157,27 @@ const CategorySidebar: React.FC = () => {
                 />
                 <label
                   htmlFor="outOfStock"
-                  className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+                  className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
                 >
                   Out of stock
                 </label>
               </div>
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 0
               </div>
             </div>
           </div>
-          <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-[#BDBDBD]" />
+          <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
 
           <div className="hidden lg:flex flex-col gap-[12px]">
             <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
               Product type
             </div>
             <div className="flex items-center justify-between">
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 0 selected
               </div>
-              <div className="text-[#595959] text-[15.09px] font-normal leading-[22.64px]">
+              <div className="text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
                 Reset
               </div>
             </div>
@@ -191,27 +191,27 @@ const CategorySidebar: React.FC = () => {
                 />
                 <label
                   htmlFor="smartWatch"
-                  className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+                  className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
                 >
                   Smart-watch
                 </label>
               </div>
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 5
               </div>
             </div>
           </div>
-          <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-[#BDBDBD]" />
+          <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
 
           <div className="hidden lg:flex flex-col gap-[12px]">
             <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
               Price
             </div>
             <div className="flex items-center justify-between">
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 0 selected
               </div>
-              <div className="text-[#595959] text-[15.09px] font-normal leading-[22.64px]">
+              <div className="text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
                 Reset
               </div>
             </div>
@@ -225,12 +225,12 @@ const CategorySidebar: React.FC = () => {
                 />
                 <label
                   htmlFor="under10"
-                  className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]"
+                  className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]"
                 >
                   Under $10
                 </label>
               </div>
-              <div className="text-[#222222] text-[16.09px] font-normal leading-[24.14px]">
+              <div className="text-categoryTextColor text-[16.09px] font-normal leading-[24.14px]">
                 5
               </div>
             </div>

@@ -16,7 +16,7 @@ const ReviewCarousel: React.FC = () => {
       {REVIEWS.map((review, index) => (
         <div
           key={index}
-          className="border border-[#BABABA] rounded-[20px] p-[16.83px]"
+          className="border border-reviewBorder rounded-[20px] p-[16.83px]"
         >
           <div className="flex gap-[37.39px] items-center">
             <img

@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               64 st james boulevard hoswick , ze2 7zj
             </p>
           </div>
-          <div className="flex gap-[37px] pt-[25px] border-t border-[#9D9D9D]">
+          <div className="flex gap-[37px] pt-[25px] border-t border-footerBorderClr">
             {socialIcons.map(({ component: Icon, key }) => (
               <Icon key={key} className="cursor-pointer" />
             ))}
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-[15px] list-disc list-inside">
                 <span className="font-semibold ">{title}</span>
                 {links.map((link, index) => (
-                  <li key={index} className="text-[#D9D9D9]">
+                  <li key={index} className="text-footerLinkClr">
                     <span className="text-secondary cursor-pointer">{link}</span>
                   </li>
                 ))}

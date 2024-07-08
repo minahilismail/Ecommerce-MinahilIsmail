@@ -18,15 +18,15 @@ const Home: React.FC = () => {
             <button className="w-full md:w-auto items-center justify-center px-6 py-4 border border-transparent text-sm font-medium rounded-[15px] shadow-sm text-white bg-primary hover:bg-brandOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Shop now
             </button>
-            <button className="w-full md:w-auto ml-0 md:ml-3 items-center justify-center px-6 py-4 border border-[#316887] text-sm rounded-[15px] font-medium shadow-sm text-[#316887] bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2">
+            <button className="w-full md:w-auto ml-0 md:ml-3 items-center justify-center px-6 py-4 border border-brandTeal text-sm rounded-[15px] font-medium shadow-sm text-brandTeal bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2">
               View more
             </button>
           </div>
 
           <div className="hidden md:flex gap-2  mt-[49px]">
-            <div className="h-[16px] w-[16px] border border-[#ADADAD] bg-primary rounded-full ml-[90px]"></div>
-            <div className="h-[16px] w-[16px] border border-[#ADADAD] rounded-full "></div>
-            <div className="h-[16px] w-[16px] border border-[#ADADAD] rounded-full "></div>
+            <div className="h-[16px] w-[16px] border border-carouselDotsClr bg-primary rounded-full ml-[90px]"></div>
+            <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
+            <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
           </div>
         </div>
       </div>

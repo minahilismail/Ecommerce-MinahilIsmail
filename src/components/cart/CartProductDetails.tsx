@@ -59,18 +59,18 @@ const CartProductDetails: React.FC = () => {
                   product.quantity - 1 < 0 ? 0 : product.quantity - 1
                 )
               }
-              className=" flex items-center justify-center h-[35px] w-[32px] border border-[#BDBDBD]"
+              className=" flex items-center justify-center h-[35px] w-[32px] border border-borderColor"
             >
               -
             </button>
-            <div className=" flex items-center justify-center h-[35px] w-[63px] border border-[#BDBDBD]">
+            <div className=" flex items-center justify-center h-[35px] w-[63px] border border-borderColor">
               {product?.quantity}
             </div>
             <button
               onClick={() =>
                 handleQuantityChange(product?.id, product?.quantity + 1)
               }
-              className="  flex items-center justify-center h-[35px] w-[32px] border border-[#BDBDBD]"
+              className="  flex items-center justify-center h-[35px] w-[32px] border border-borderColor"
             >
               +
             </button>
@@ -129,19 +129,19 @@ const CartProductDetails: React.FC = () => {
         </div>
         <div className="px-[43.5px] py-[23px] flex flex-col gap-[29px]">
           <div className="flex flex-col gap-[33px]">
-            <div className="flex items-center justify-between border-b border-[#AFAFAF] font-medium text-[19.68px] leading-[29.52px] pb-[20px]">
+            <div className="flex items-center justify-between border-b border-borderGrey font-medium text-[19.68px] leading-[29.52px] pb-[20px]">
               <div>Subtotal</div>
               <div>${subTotal?.toFixed(2)}</div>
             </div>
 
-            <div className="pb-[33px] border-b border-[#AFAFAF]">
-              <div className="rounded-[20px] overflow-hidden border border-[#DFDFDF] flex items-center justify-between p-[20px]">
+            <div className="pb-[33px] border-b border-borderGrey">
+              <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between p-[20px]">
                 <div>Enter coupon code</div>
                 <button>Apply</button>
               </div>
             </div>
 
-            <div className="rounded-[20px] overflow-hidden border border-[#DFDFDF] flex items-center justify-between p-[20px]">
+            <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between p-[20px]">
               <div>Country</div>
               <button>
                 <ArrowDown2 />

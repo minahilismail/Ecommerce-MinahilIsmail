@@ -13,7 +13,7 @@ const ScrollableProducts: React.FC = () => {
     <Link
       to={`/product/${product?.id}`}
       key={product?.id}
-      className="relative h-[147px] flex px-4 sm:px-[43.14px] py-[26.5px] items-center mb-9 rounded-[20px] border border-[#A5A5A5] overflow-hidden shadow-lg mx-auto"
+      className="relative h-[147px] flex px-4 sm:px-[43.14px] py-[26.5px] items-center mb-9 rounded-[20px] border border-borderClr2 overflow-hidden shadow-lg mx-auto"
     >
       <div className="flex justify-center items-center gap-4 sm:gap-[43.35px] md:px-0 px-5">
         <img
@@ -51,7 +51,7 @@ const ScrollableProducts: React.FC = () => {
   const CustomRightArrow: React.FC<ArrowProps> = ({ onClick }) => {
     return (
       <button
-        className="hidden md:block absolute -right-2 top-20 transform -translate-y-1/2 z-10 bg-[#EAEAEA] p-2 rounded-full w-[37px] h-[37px]"
+        className="hidden md:block absolute -right-2 top-20 transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
         onClick={onClick}
       >
         <ArrowRight size="24" />
@@ -62,7 +62,7 @@ const ScrollableProducts: React.FC = () => {
   const CustomLeftArrow: React.FC<ArrowProps> = ({ onClick }) => {
     return (
       <button
-        className="hidden md:block absolute -left-3 top-20 transform -translate-y-1/2 z-10 bg-[#EAEAEA] p-2 rounded-full w-[37px] h-[37px]"
+        className="hidden md:block absolute -left-3 top-20 transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
         onClick={onClick}
       >
         <ArrowLeft size="24" />
