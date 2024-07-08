@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import RootLayout from "./components/rootLayout/RootLayout";
 import CartPage from "./pages/CartPage";
-import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CategoriesPage from "./pages/CategoriesPage";
 
@@ -14,7 +14,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route index element={<HomePage />}></Route>
+        <Route index element={<Home />}></Route>
         <Route path="/cart" element={<CartPage />}></Route>
         <Route
           path="/product/:productId"

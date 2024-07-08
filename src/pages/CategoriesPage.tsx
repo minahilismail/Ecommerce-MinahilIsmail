@@ -1,10 +1,10 @@
 import Banner from "../components/banner/Banner";
-import CategoryProducts from "../components/categories/CategoryProducts";
+import Categories from "../components/categories/Categories";
 
 function CategoriesPage() {
   return (
     <>
-      <CategoryProducts />
+      <Categories />
       <Banner />
     </>
   );

@@ -1,10 +1,49 @@
-import { Send2 } from "iconsax-react";
+import { Icon, Send2 } from "iconsax-react";
 import { Headphone } from "iconsax-react";
 import { Google } from "iconsax-react";
 import { Facebook } from "iconsax-react";
 import { Whatsapp } from "iconsax-react";
 import footerImg from "../../assets/footerLogo.png";
 const Footer: React.FC = () => {
+  const socialIcons = [
+    { component: Google, key: "google" },
+    { component: Facebook, key: "facebook" },
+    { component: Whatsapp, key: "whatsapp" },
+  ];
+
+  const footerLinks = [
+    {
+      title: "Find product",
+      links: [
+        "Brownze arnold",
+        "Chronograph blue",
+        "Smart phones",
+        "Automatic watch",
+        "Hair straighteners",
+      ],
+    },
+    {
+      title: "Get help",
+      links: [
+        "About us",
+        "Contact us",
+        "Return policy",
+        "Privacy policy",
+        "Payment policy",
+      ],
+    },
+    {
+      title: "About us",
+      links: [
+        "News",
+        "Service",
+        "Our policy",
+        "Customer care",
+        "Faq's",
+      ],
+    },
+  ];
+
   return (
     <div className="bg-quality px-[38px] w-full py-[29px] md:pt-[42px] mt-[60px]">
       <div className="bg-white md:py-[24px] py-[14px] px-[22.5px] rounded-[20px] flex flex-col md:flex-row items-center md:justify-around justify-center gap-[12px] mb-[41px]">
@@ -41,74 +80,27 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-[37px] pt-[25px] border-t border-[#9D9D9D]">
-            <Google />
-            <Facebook />
-            <Whatsapp />
+          {socialIcons.map(({component:Icon, key})=>(
+            <Icon key={key}/>
+          )
+          )}
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-[24px] lg:gap-[100px] md:gap-[20px] text-nowrap text-[19.38px]">
-          <div className="text-secondary">
+          {footerLinks.map(({title,links})=>(
+            <div className="text-secondary">
             <ul className="space-y-[15px] list-disc list-inside">
-              <span className="font-semibold ">Find product</span>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Brownze arnold</span>
+              <span className="font-semibold ">{title}</span>
+              {links.map((link,index)=>(
+                <li key={index} className="text-[#D9D9D9]">
+                <span className="text-secondary">{link}</span>
               </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Chronograph blue</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Smart phones</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Automatic watch</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Hair straighteners</span>
-              </li>
+              ))}
+              
             </ul>
           </div>
-
-          <div className="text-secondary">
-            <ul className="space-y-[15px] list-disc list-inside">
-              <span className="font-semibold">Get help</span>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">About us</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Contact us</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Return policy</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Privacy policy</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Payment policy</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="text-secondary">
-            <ul className="space-y-[15px] list-disc list-inside">
-              <span className="font-semibold">About us</span>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">News</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Service</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Our policy</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Customer care</span>
-              </li>
-              <li className="text-[#D9D9D9]">
-                <span className="text-secondary">Faq's</span>
-              </li>
-            </ul>
-          </div>
+          ))}
+          
         </div>
       </div>
     </div>

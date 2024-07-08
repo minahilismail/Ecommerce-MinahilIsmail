@@ -1,4 +1,4 @@
-import Home from "../components/home/Home";
+import HeroComponent from "../components/heroComponent/HeroComponent";
 import ScrollableProducts from "../components/products/ScrollProducts";
 import PopularProducts from "../components/products/PopularProducts";
 import Banner from "../components/banner/Banner";
@@ -7,10 +7,10 @@ import QualityFeatures from "../components/qualityFeatures/QualityFeatures";
 import ReviewCarousel from "../components/reviews/Reviews";
 import BrandsSponsor from "../components/brandsSponsor/BrandsSponsor";
 import NewsComponent from "../components/newsComponent/NewsComponent";
-function HomePage() {
+function Home() {
   return (
     <>
-      <Home />
+      <HeroComponent />
       <ScrollableProducts />
       <PopularProducts />
       <Banner />
@@ -22,4 +22,4 @@ function HomePage() {
     </>
   );
 }
-export default HomePage;
+export default Home;
