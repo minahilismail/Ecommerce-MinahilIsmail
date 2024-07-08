@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
 import { USER_REVIEW } from "../../types/types";
-import user1 from "../../assets/user1.png";
-import user2 from "../../assets/user2.png";
-import user3 from "../../assets/user3.png";
+import user1 from "../../assets/images/user1.png";
+import user2 from "../../assets/images/user2.png";
+import user3 from "../../assets/images/user3.png";
 
 const reviews: USER_REVIEW[] = [
   {

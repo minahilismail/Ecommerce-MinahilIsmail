@@ -6,7 +6,7 @@ import { Heart } from "iconsax-react";
 import { Location } from "iconsax-react";
 import { Truck } from "iconsax-react";
 import { useAppSelector } from "../../hooks/hooks";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/images/logo.png";
 
 const Navbar: React.FC = () => {
   const cartItems = useAppSelector((state) => state.cart.length);

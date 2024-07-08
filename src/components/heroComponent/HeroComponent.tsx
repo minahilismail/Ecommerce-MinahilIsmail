@@ -1,4 +1,4 @@
-import cannonCamera from "../../assets/cannonCamera.png";
+import cannonCamera from "../../assets/images/cannonCamera.png";
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-around md:gap-[100px] lg:gap-[477px] bg-white sm:rounded-lg mt-8">

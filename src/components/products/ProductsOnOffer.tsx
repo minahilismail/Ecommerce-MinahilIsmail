@@ -1,6 +1,6 @@
-import Speakers from "../../assets/Speakers.png";
-import remoteControl from "../../assets/remoteControl.png";
-import laptop from "../../assets/Laptop.png";
+import Speakers from "../../assets/images/speakers.png";
+import remoteControl from "../../assets/images/remoteControl.png";
+import laptop from "../../assets/images/laptop.png";
 import Star from "../star/Star";
 import { ShoppingCart } from "iconsax-react";
 import { Eye } from "iconsax-react";

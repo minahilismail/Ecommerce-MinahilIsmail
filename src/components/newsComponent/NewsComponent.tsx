@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
 import { NEWS } from "../../types/types";
-import news1 from "../../assets/news1.png";
-import news2 from "../../assets/news2.png";
+import news1 from "../../assets/images/news1.png";
+import news2 from "../../assets/images/news2.png";
 
 const newsList: NEWS[] = [
   {

@@ -1,9 +1,9 @@
 import React from "react";
-import brand8 from "../../assets/brands/brand-8.png";
-import brand4 from "../../assets/brands/brand-4.png";
-import brand5 from "../../assets/brands/brand-5.png";
-import brand6 from "../../assets/brands/brand-6.png";
-import brand7 from "../../assets/brands/brand-7.png";
+import brand8 from "../../assets/images/brands/brand-8.png";
+import brand4 from "../../assets/images/brands/brand-4.png";
+import brand5 from "../../assets/images/brands/brand-5.png";
+import brand6 from "../../assets/images/brands/brand-6.png";
+import brand7 from "../../assets/images/brands/brand-7.png";
 
 const BrandsSponsor: React.FC = () => {
   const brands = [brand8, brand4, brand5, brand6, brand7];

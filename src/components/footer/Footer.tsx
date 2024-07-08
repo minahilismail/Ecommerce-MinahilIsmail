@@ -1,9 +1,9 @@
-import { Icon, Send2 } from "iconsax-react";
+import { Send2 } from "iconsax-react";
 import { Headphone } from "iconsax-react";
 import { Google } from "iconsax-react";
 import { Facebook } from "iconsax-react";
 import { Whatsapp } from "iconsax-react";
-import footerImg from "../../assets/footerLogo.png";
+import footerImg from "../../assets/images/footerLogo.png";
 const Footer: React.FC = () => {
   const socialIcons = [
     { component: Google, key: "google" },

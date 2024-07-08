@@ -1,4 +1,4 @@
-import bannerImg from "../../assets/Banner.png";
+import bannerImg from "../../assets/images/banner.png";
 const Banner: React.FC = () => {
   return (
     <div className="relative md:mx-6 lg:mx-[64px]">
