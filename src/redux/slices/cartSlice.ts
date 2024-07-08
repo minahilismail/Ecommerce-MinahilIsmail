@@ -8,16 +8,16 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     add(state, action: PayloadAction<CART_ITEM>) {
-      const existingItem = state?.find((item) => item?.id === action?.payload.id);
+      const existingItem = state?.find(
+        (item) => item?.id === action?.payload.id
+      );
       if (!existingItem) {
         state.push(action?.payload);
       } else {
-        // Increase quantity if item already exists in the cart
         existingItem.quantity += 1;
       }
     },
     remove(state, action: PayloadAction<CART_ITEM>) {
-      // Remove item from cart by ID
       return state?.filter((item) => item?.id !== action?.payload.id);
     },
     adjustQuantity(
@@ -27,12 +27,10 @@ export const cartSlice = createSlice({
       const { productId, quantity } = action.payload;
       const existingItem = state?.find((item) => item?.id === productId);
       if (existingItem) {
-        // Adjust quantity of the specified item
         existingItem.quantity = quantity;
       }
     },
     removeAll() {
-      // Empty the cart
       return initialState;
     },
   },

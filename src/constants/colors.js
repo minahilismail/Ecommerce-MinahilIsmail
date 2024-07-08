@@ -12,5 +12,6 @@ const colors = {
   updateCartText: "#797979",
   updateCart: "#A9A9A9",
   footerText: "#606060",
+  brandOrange: "#df9b13",
 };
 export default colors;

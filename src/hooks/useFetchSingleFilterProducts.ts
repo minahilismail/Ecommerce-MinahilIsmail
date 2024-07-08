@@ -12,7 +12,7 @@ const useFetchSingleFilterProducts = (
   useEffect(() => {
     axios.get(url).then((response) => {
       setCategoriesProducts(response.data);
-      setFilteredProducts(response.data); // Set all products as the initial state
+      setFilteredProducts(response.data);
     });
   }, []);
 

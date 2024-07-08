@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="w-full mt-5 flex flex-col text-center space-y-3 md:flex-row md:space-y-0 md:space-x-3 md:mx-0">
-            <button className="w-full md:w-auto items-center justify-center px-6 py-4 border border-transparent text-sm font-medium rounded-[15px] shadow-sm text-white bg-primary hover:bg-[#df9b13] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+            <button className="w-full md:w-auto items-center justify-center px-6 py-4 border border-transparent text-sm font-medium rounded-[15px] shadow-sm text-white bg-primary hover:bg-brandOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Shop now
             </button>
             <button className="w-full md:w-auto ml-0 md:ml-3 items-center justify-center px-6 py-4 border border-[#316887] text-sm rounded-[15px] font-medium shadow-sm text-[#316887] bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2">

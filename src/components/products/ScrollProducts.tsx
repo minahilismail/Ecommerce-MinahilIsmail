@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import useFetchProducts from "../../hooks/useFetchProducts";
 
 const ScrollableProducts: React.FC = () => {
-  //using custom hook to fetch data
   const [products] = useFetchProducts(
     "https://fakestoreapi.com/products?limit=6"
   );
