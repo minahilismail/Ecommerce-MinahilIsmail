@@ -3,66 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
-import { USER_REVIEW } from "../../types/types";
-import user1 from "../../assets/images/user1.png";
-import user2 from "../../assets/images/user2.png";
-import user3 from "../../assets/images/user3.png";
+import { REVIEWS, SETTINGS } from "../../constants/review/review";
 
-const reviews: USER_REVIEW[] = [
-  {
-    fullName: "Alice Johnson",
-    image: user1,
-    review:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iste obcaecati deleniti alias assumenda architecto, est similique! Sed ducimus suscipit aut iste non quia atque, aperiam qui cumque. Dolore.",
-  },
-
-  {
-    fullName: "Emma Davis",
-    image: user2,
-    review:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iste obcaecati deleniti alias assumenda architecto, est similique! Sed ducimus suscipit aut iste non quia atque, aperiam qui cumque. Dolore.",
-  },
-  {
-    fullName: "Frank Miller",
-    image: user3,
-    review:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iste obcaecati deleniti alias assumenda architecto, est similique! Sed ducimus suscipit aut iste non quia atque, aperiam qui cumque. Dolore.",
-  },
-];
 const ReviewCarousel: React.FC = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-        },
-      },
-    ],
-  };
+  
 
   return (
     <Slider
-      {...settings}
+      {...SETTINGS}
       className="flex gap-[26.17px] items-center justify-center mb-[24px] mx-6 lg:mx-[61px]"
     >
-      {reviews.map((review, index) => (
+      {REVIEWS.map((review, index) => (
         <div
           key={index}
           className="border border-[#BABABA] rounded-[20px] p-[16.83px]"
