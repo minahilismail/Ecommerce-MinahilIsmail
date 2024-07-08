@@ -49,14 +49,14 @@ const Navbar: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="flex items-center  gap-[29px]">
-                <div className="flex items-center gap-[12px]">
+              <div className="flex items-center gap-[29px]">
+                <div className="flex items-center cursor-pointer gap-[12px]">
                   <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer  transition-all duration-200">
                     <User />
                   </div>
                   <div className="text-white hidden md:flex">Sign in</div>
                 </div>
-                <div className="flex items-center gap-[12px]">
+                <div className="flex cursor-pointer items-center gap-[12px]">
                   <div className="flex items-center">
                     <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer  transition-all duration-200">
                       <Heart />

@@ -2,6 +2,14 @@ import { ArrowDown2 } from "iconsax-react";
 import { Link } from "react-router-dom";
 
 const BrowseCategory: React.FC = () => {
+  const navLinks = [
+    { name: "Home", hasDropdown: true },
+    { name: "Catalog", hasDropdown: true },
+    { name: "Blog", hasDropdown: false },
+    { name: "Pages", hasDropdown: true },
+    { name: "About us", hasDropdown: false },
+  ];
+
   return (
     <div className="w-full flex flex-col md:flex-row md:py-0 items-center justify-center bg-white top-[174px] gap-[20px] lg:gap-[98px] md:gap-[50px] md:justify-around">
       <Link
@@ -16,27 +24,18 @@ const BrowseCategory: React.FC = () => {
 
       <div className="flex flex-col md:flex-row items-center lg:gap-[100px] md:gap-[30px]">
         <div className="hidden lg:flex items-center gap-[29px] text-navText">
-          <div className="flex items-center gap-[16px]">
-            <div>Home</div>
-            <div>
-              <ArrowDown2 />
+          {navLinks.map((link,index)=>(
+            <div key={index} className="flex items-center gap-[16px]">
+            <div className="cursor-pointer">{link.name}</div>
+            {link.hasDropdown &&(
+              <div>
+              <ArrowDown2 className="cursor-pointer"/>
             </div>
+            )}
+            
           </div>
-          <div className="flex items-center gap-[16px]">
-            <div>Catalog</div>
-            <div>
-              <ArrowDown2 />
-            </div>
-          </div>
-
-          <div>Blog</div>
-          <div className="flex items-center gap-[16px]">
-            <div>Pages</div>
-            <div className="">
-              <ArrowDown2 />
-            </div>
-          </div>
-          <div>About us</div>
+          ))}
+          
         </div>
         <div className="text-navColor text-nowrap font-bold">
           30 Days Free Return

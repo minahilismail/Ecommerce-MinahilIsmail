@@ -34,13 +34,7 @@ const Footer: React.FC = () => {
     },
     {
       title: "About us",
-      links: [
-        "News",
-        "Service",
-        "Our policy",
-        "Customer care",
-        "Faq's",
-      ],
+      links: ["News", "Service", "Our policy", "Customer care", "Faq's"],
     },
   ];
 
@@ -80,27 +74,24 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-[37px] pt-[25px] border-t border-[#9D9D9D]">
-          {socialIcons.map(({component:Icon, key})=>(
-            <Icon key={key}/>
-          )
-          )}
+            {socialIcons.map(({ component: Icon, key }) => (
+              <Icon key={key} className="cursor-pointer" />
+            ))}
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-[24px] lg:gap-[100px] md:gap-[20px] text-nowrap text-[19.38px]">
-          {footerLinks.map(({title,links})=>(
+          {footerLinks.map(({ title, links }) => (
             <div className="text-secondary">
-            <ul className="space-y-[15px] list-disc list-inside">
-              <span className="font-semibold ">{title}</span>
-              {links.map((link,index)=>(
-                <li key={index} className="text-[#D9D9D9]">
-                <span className="text-secondary">{link}</span>
-              </li>
-              ))}
-              
-            </ul>
-          </div>
+              <ul className="space-y-[15px] list-disc list-inside">
+                <span className="font-semibold ">{title}</span>
+                {links.map((link, index) => (
+                  <li key={index} className="text-[#D9D9D9]">
+                    <span className="text-secondary cursor-pointer">{link}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-          
         </div>
       </div>
     </div>
