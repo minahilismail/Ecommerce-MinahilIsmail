@@ -9,6 +9,7 @@ import CartPage from "./pages/CartPage";
 import Home from "./pages/Home";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CategoriesPage from "./pages/CategoriesPage";
+import WishlistPage from "./pages/WishlistPage/WishlistPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ function App() {
         ></Route>
         <Route path="/category" element={<CategoriesPage />}></Route>
         <Route path="/category/:category" element={<CategoriesPage />} />
+        <Route path="/wishlist" element={<WishlistPage/>}></Route>
       </Route>
     )
   );

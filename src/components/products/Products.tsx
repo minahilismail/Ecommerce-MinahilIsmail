@@ -1,40 +1,18 @@
 import Star from "../star/Star";
-import { Heart } from "iconsax-react";
-import { PRODUCT_ITEM } from "../../types/types";
-import { useAppDispatch } from "../../hooks/hooks";
-import { add } from "../../redux/slices/cartSlice";
 import useProducts from "./useProducts";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
 import Loader from "../loader/Loader";
-import toast from "react-hot-toast";
 import { SIZES } from "../../constants/products/products";
 import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
+import WishlistIcon from "../wishlistIcon/WishlistIcon";
 
-const ProductDetails: React.FC = () => {
-  const [, productIdNum] = useFetchProductIdFromUrl();
-  const dispatch = useAppDispatch();
+const Products: React.FC = () => {
+    const [, productIdNum] = useFetchProductIdFromUrl();
 
-  const [product, quantityCount, setQuantityCount] = useProducts(
+  const {product, quantityCount,addToCart,handleIncrement,handleDecrement} = useProducts(
     `https://fakestoreapi.com/products/${productIdNum}`
   );
-
-  const addToCart = (product: PRODUCT_ITEM) => {
-    if (quantityCount === 0) return;
-    const productWithQuantity = { ...product, quantity: quantityCount };
-    dispatch(add(productWithQuantity));
-    toast.success("Item added to cart");
-  };
-
-  const handleIncrement = () => {
-    setQuantityCount((prevCount) => prevCount + 1);
-  };
-
-  const handleDecrement = () => {
-    if (quantityCount > 0) {
-      setQuantityCount((prevCount) => prevCount - 1);
-    }
-  };
-
+  
   if (!product) {
     return <Loader />;
   }
@@ -132,9 +110,7 @@ const ProductDetails: React.FC = () => {
               <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center px-[37px] py-[19.5px] font-semibold">
                 Buy it now
               </button>
-              <button className=" hidden md:flex items-center justify-center md:h-[73px] md:w-[74px] font-semibold">
-                <Heart color="heartColor" className="h-[36px] w-[36px]" />
-              </button>
+              <button><WishlistIcon product={product} /></button>
             </div>
           </div>
 
@@ -190,4 +166,4 @@ const ProductDetails: React.FC = () => {
   );
 };
 
-export default ProductDetails;
+export default Products;

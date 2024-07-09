@@ -8,6 +8,7 @@ import usePopularProducts from "./usePopularProducts";
 import Loader from "../loader/Loader";
 import useGetProducts from "../../hooks/useGetProducts";
 import { RESPONSIVE } from "../../constants/products/products";
+import ProductCard from "../productCard/productCard";
 
 const PopularProducts: React.FC = () => {
   const { isLoading, isError } = useGetProducts();
@@ -31,42 +32,7 @@ const PopularProducts: React.FC = () => {
   ));
 
   const catProCards = filteredProducts?.map((product) => (
-    <div
-      key={product?.id}
-      className="relative rounded-2xl p-6 border border-borderClr2 overflow-hidden shadow-lg flex flex-col justify-between"
-      style={{ height: "305px" }}
-    >
-      <div className="space-y-4 sm:space-y-[43.35px]">
-        <div className="flex items-center justify-center">
-          <img
-            className="object-contain"
-            src={product?.image}
-            style={{ width: "154px", height: "94px" }}
-            alt="Card Image"
-          />
-        </div>
-
-        <div className="flex flex-col text-left justify-start gap-[15.74px] text-secondary max-w-[188px]">
-          <div className="font-semibold truncate">{product?.title}</div>
-          <div className="font-semibold text-textClr1 text-[17.09px]">
-            ${product.price}
-          </div>
-
-          <div className="flex flex-col md:flex-row md:items-center items-start md:space-y-0 space-y-1 justify-start md:justify-between font-semibold text-border1">
-            <Star stars={product?.rating?.rate} />
-            <Link to={`/product/${product?.id}`}>
-              <div className="text-nowrap bg-primary rounded-md p-2 text-white">
-                View Details
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute top-[30px] right-[20px] w-[27.54px] h-[27.54px] rounded-[122.4px] bg-favorite flex items-center justify-center">
-        <Heart className="h-[14.45px] w-[14.45px]" />
-      </div>
-    </div>
+    <ProductCard key={product.id} product={product} />
   ));
 
   if (isLoading || isError) return <Loader />;

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { PRODUCT_ITEM } from "../../types/types";
 import axios from "axios";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
+import { useAppDispatch } from "../../hooks/hooks";
+import { add } from "../../redux/slices/cartSlice";
+import toast from "react-hot-toast";
 
 const useProducts = (
   url: string
-): [
-  PRODUCT_ITEM | null,
-  number,
-  React.Dispatch<React.SetStateAction<number>>
-] => {
+) => {
+  const dispatch =useAppDispatch();
   const [productInCart, productIdNum] = useFetchProductIdFromUrl();
   const [product, setProduct] = useState<PRODUCT_ITEM | null>(null);
 
@@ -29,6 +29,24 @@ const useProducts = (
     }
   }, [productIdNum, productInCart]);
 
-  return [product, quantityCount, setQuantityCount];
+  const addToCart = (product: PRODUCT_ITEM) => {
+    if (quantityCount === 0) return;
+    const productWithQuantity = { ...product, quantity: quantityCount };
+    dispatch(add(productWithQuantity));
+    toast.success("Item added to cart");
+  };
+
+  const handleIncrement = () => {
+    setQuantityCount((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantityCount > 0) {
+      setQuantityCount((prevCount) => prevCount - 1);
+    }
+  };
+
+
+  return {product, quantityCount,addToCart,handleIncrement,handleDecrement};
 };
 export default useProducts;

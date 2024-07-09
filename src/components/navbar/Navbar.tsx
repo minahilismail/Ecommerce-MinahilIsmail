@@ -10,6 +10,7 @@ import logo from "../../assets/images/logo.png";
 
 const Navbar: React.FC = () => {
   const cartItems = useAppSelector((state) => state.cart.length);
+  const wishlistItems = useAppSelector((state) => state.wishlist.length);
   return (
     <div className="bg-white w-full">
       <div className="text-center md:pt-[21px] md:pb-[29px] md:px-[55px] md:flex items-center md:justify-between justify-center">
@@ -56,17 +57,17 @@ const Navbar: React.FC = () => {
                   </div>
                   <div className="text-white hidden md:flex">Sign in</div>
                 </div>
-                <div className="flex cursor-pointer items-center gap-[12px]">
+                <Link to="/wishlist" className="flex cursor-pointer items-center gap-[12px]">
                   <div className="flex items-center">
                     <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer  transition-all duration-200">
                       <Heart />
                     </div>
                     <div className="bg-primary rounded-[394.74px] w-[14.21px] h-[15px] text-white text-[9.47px] flex items-center justify-center">
-                      0
+                      {wishlistItems}
                     </div>
                   </div>
                   <div className="text-white hidden md:flex">Wishlist</div>
-                </div>
+                </Link>
                 <Link to="/cart" className="flex items-center gap-[12px]">
                   <div className="flex items-center">
                     <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer transition-all duration-200">

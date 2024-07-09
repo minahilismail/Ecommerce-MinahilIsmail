@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Star from "../star/Star";
-import { Heart } from "iconsax-react";
+
 import { PRODUCT_ITEM } from "../../types/types";
+
+import WishlistIcon from "../wishlistIcon/WishlistIcon";
+
 
 interface ProductCardProps {
   product: PRODUCT_ITEM;
@@ -10,13 +13,14 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Link
-      to={`/product/${product.id}`}
+    <div
       key={product.id}
       className="relative rounded-2xl p-6 border border-borderClr2 overflow-hidden shadow-lg mx-auto"
       style={{ width: "300px", height: "305px" }}
     >
-      <div className="space-y-4 sm:space-y-[43.35px]">
+      <Link
+      to={`/product/${product.id}`}
+      className="space-y-4 sm:space-y-[43.35px]">
         <div className="flex items-center justify-center">
           <img
             className="object-contain"
@@ -35,11 +39,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <Star stars={product.rating.rate} />
           </div>
         </div>
-      </div>
-      <div className="absolute top-[30px] right-[20px] w-[27.54px] h-[27.54px] rounded-[122.4px] bg-favorite flex items-center justify-center">
-        <Heart className="h-[14.45px] w-[14.45px]" />
-      </div>
-    </Link>
+      </Link>
+      <WishlistIcon product={product}/>
+    </div>
   );
 };
 
