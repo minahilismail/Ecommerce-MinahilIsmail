@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { PRODUCT_ITEM } from "../types/types";
+import { PRODUCT_ITEM } from "../../types/types";
 import axios from "axios";
 
-const useFetchProducts = (url: string) => {
+const useScrollProducts = (url: string) => {
   const [products, setProducts] = useState<PRODUCT_ITEM[]>([]);
 
   useEffect(() => {
@@ -10,4 +10,4 @@ const useFetchProducts = (url: string) => {
   }, []);
   return [products];
 };
-export default useFetchProducts;
+export default useScrollProducts;

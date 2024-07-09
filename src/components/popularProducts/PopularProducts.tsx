@@ -4,18 +4,18 @@ import Star from "../star/Star";
 import { Heart } from "iconsax-react";
 import { Link } from "react-router-dom";
 import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchSingleFilterProducts from "../../hooks/useFetchSingleFilterProducts";
+import usePopularProducts from "./usePopularProducts";
 import Loader from "../loader/Loader";
 import useGetProducts from "../../hooks/useGetProducts";
 
 const PopularProducts: React.FC = () => {
-  const {isLoading,isError,product}=useGetProducts();
+  const {isLoading,isError}=useGetProducts();
   const [categories] = useFetchCategories(
     "https://fakestoreapi.com/products/categories"
   );
   
   const [filteredProducts, handleFilterButtonClick] =
-    useFetchSingleFilterProducts("https://fakestoreapi.com/products");
+    usePopularProducts("https://fakestoreapi.com/products");
 
   var i: number = 0;
   const cards = categories?.map((category) => (
@@ -86,9 +86,7 @@ const PopularProducts: React.FC = () => {
       
     </div>
   ));
-  console.log(isLoading);
-  console.log(isError);
-  console.log(product);
+
     if(isLoading || isError) return <Loader/>
   return (
     <>

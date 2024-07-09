@@ -1,6 +1,6 @@
 import React from "react";
 import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchCategorywiseProductsCount from "../../hooks/useFetchCategorywiseProductsCount";
+import useCategories from "./useCategories";
 import useFetchMultiFilteredProducts from "../../hooks/useFetchMultiFilteredProducts";
 import CheckboxFilter from "../checkboxFilter/CheckboxFilter";
 import ProductCard from "../productCard/productCard";
@@ -12,7 +12,7 @@ const CategorySidebar: React.FC = () => {
   const [categories] = useFetchCategories(
     "https://fakestoreapi.com/products/categories"
   );
-  const [productCounts] = useFetchCategorywiseProductsCount();
+  const [productCounts] = useCategories();
   const [
     selectedFilters,
     setSelectedFilters,

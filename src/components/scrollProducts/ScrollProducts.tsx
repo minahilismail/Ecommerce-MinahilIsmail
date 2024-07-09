@@ -2,10 +2,10 @@ import Carousel, { ArrowProps } from "react-multi-carousel";
 import { ArrowRight, ArrowLeft } from "iconsax-react";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
-import useFetchProducts from "../../hooks/useFetchProducts";
+import useScrollProducts from "./useScrollProducts";
 
 const ScrollableProducts: React.FC = () => {
-  const [products] = useFetchProducts(
+  const [products] = useScrollProducts(
     "https://fakestoreapi.com/products?limit=6"
   );
 

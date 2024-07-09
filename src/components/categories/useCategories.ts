@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useFetchCategorywiseProductsCount = (): [{ [key: string]: number }] => {
+const useCategories = (): [{ [key: string]: number }] => {
   const [productCounts, setProductCounts] = useState<{ [key: string]: number }>(
     {}
   );
@@ -28,4 +28,4 @@ const useFetchCategorywiseProductsCount = (): [{ [key: string]: number }] => {
   return [productCounts];
 };
 
-export default useFetchCategorywiseProductsCount;
+export default useCategories;

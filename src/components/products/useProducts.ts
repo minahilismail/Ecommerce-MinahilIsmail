@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { PRODUCT_ITEM } from "../types/types";
+import { PRODUCT_ITEM } from "../../types/types";
 import axios from "axios";
-import useFetchProductIdFromUrl from "./useFetchProductIdFromUrl";
+import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
 
-const useFetchSingleProducts = (
+const useProducts = (
   url: string
 ): [
   PRODUCT_ITEM | null,
@@ -31,4 +31,4 @@ const useFetchSingleProducts = (
 
   return [product, quantityCount, setQuantityCount];
 };
-export default useFetchSingleProducts;
+export default useProducts;

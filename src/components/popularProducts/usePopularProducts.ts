@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { PRODUCT_ITEM } from "../types/types";
+import { PRODUCT_ITEM } from "../../types/types";
 import axios from "axios";
 
-const useFetchSingleFilterProducts = (
+const usePopularProducts = (
   url: string
 ): [PRODUCT_ITEM[], (selectedCategory: string) => void] => {
   const [catPro, setCategoriesProducts] = useState<PRODUCT_ITEM[]>([]);
@@ -42,4 +42,4 @@ const useFetchSingleFilterProducts = (
   };
   return [filteredProducts, handleFilterButtonClick];
 };
-export default useFetchSingleFilterProducts;
+export default usePopularProducts;
