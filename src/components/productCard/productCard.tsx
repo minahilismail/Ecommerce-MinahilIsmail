@@ -6,7 +6,6 @@ import { PRODUCT_ITEM } from "../../types/types";
 
 import WishlistIcon from "../wishlistIcon/WishlistIcon";
 
-
 interface ProductCardProps {
   product: PRODUCT_ITEM;
 }
@@ -19,8 +18,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       style={{ width: "300px", height: "305px" }}
     >
       <Link
-      to={`/product/${product.id}`}
-      className="space-y-4 sm:space-y-[43.35px]">
+        to={`/product/${product.id}`}
+        className="space-y-4 sm:space-y-[43.35px]"
+      >
         <div className="flex items-center justify-center">
           <img
             className="object-contain"
@@ -40,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
       </Link>
-      <WishlistIcon product={product}/>
+      <WishlistIcon product={product} />
     </div>
   );
 };

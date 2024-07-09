@@ -9,7 +9,7 @@ import CartPage from "./pages/CartPage";
 import Home from "./pages/Home";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CategoriesPage from "./pages/CategoriesPage";
-import WishlistPage from "./pages/WishlistPage/WishlistPage";
+import WishlistPage from "./pages/WishlistPage";
 
 function App() {
   const router = createBrowserRouter(

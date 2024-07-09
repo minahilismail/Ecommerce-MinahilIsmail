@@ -1,8 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Star from "../star/Star";
-import { Heart } from "iconsax-react";
-import { Link } from "react-router-dom";
 import useFetchCategories from "../../hooks/useFetchCategories";
 import usePopularProducts from "./usePopularProducts";
 import Loader from "../loader/Loader";
