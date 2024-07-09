@@ -8,6 +8,8 @@ import { useAppDispatch } from "../../hooks/hooks";
 import { add } from "../../redux/slices/cartSlice";
 import useFetchSingleProducts from "../../hooks/useFetchSingleProduct";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
+import Loader from "../loader/Loader";
+import toast from "react-hot-toast";
 
 const ProductDetails: React.FC = () => {
   const [, productIdNum] = useFetchProductIdFromUrl();
@@ -21,6 +23,7 @@ const ProductDetails: React.FC = () => {
     if (quantityCount === 0) return;
     const productWithQuantity = { ...product, quantity: quantityCount };
     dispatch(add(productWithQuantity));
+    toast.success("Item added to cart");
   };
 
   const handleIncrement = () => {
@@ -34,7 +37,7 @@ const ProductDetails: React.FC = () => {
   };
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   return (

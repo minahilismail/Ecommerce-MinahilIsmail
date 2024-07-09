@@ -8,6 +8,7 @@ import {
   removeAll,
 } from "../../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 const CartProductDetails: React.FC = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state?.cart);

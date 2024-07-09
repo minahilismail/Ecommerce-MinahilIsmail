@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { CART_ITEM } from "../../types/types";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 

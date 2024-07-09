@@ -12,6 +12,7 @@ export type PRODUCT_ITEM = {
   };
 };
 
+
 export type CART_ITEM = {
   category: string;
   id: number;
@@ -46,3 +47,15 @@ export type CHECKBOX_FILTER_PROPS= {
   count?: number;
   onClick: () => void;
 }
+
+export type PRODUCT_STATE = {
+  isLoading: boolean;
+  isError: string | null;
+  product:PRODUCT_ITEM[]
+};
+
+export type CART_STATE = {
+  isLoading: boolean;
+  isError: string | null;
+  cart:CART_ITEM
+};

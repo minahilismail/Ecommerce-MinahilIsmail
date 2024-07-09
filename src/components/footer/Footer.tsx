@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-[24px] lg:gap-[100px] md:gap-[20px] text-nowrap text-[19.38px]">
           {footerLinks.map(({ title, links }) => (
-            <div className="text-secondary">
+            <div key={title} className="text-secondary">
               <ul className="space-y-[15px] list-disc list-inside">
                 <span className="font-semibold ">{title}</span>
                 {links.map((link, index) => (

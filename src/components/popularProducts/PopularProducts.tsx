@@ -5,11 +5,15 @@ import { Heart } from "iconsax-react";
 import { Link } from "react-router-dom";
 import useFetchCategories from "../../hooks/useFetchCategories";
 import useFetchSingleFilterProducts from "../../hooks/useFetchSingleFilterProducts";
+import Loader from "../loader/Loader";
+import useGetProducts from "../../hooks/useGetProducts";
 
 const PopularProducts: React.FC = () => {
+  const {isLoading,isError,product}=useGetProducts();
   const [categories] = useFetchCategories(
     "https://fakestoreapi.com/products/categories"
   );
+  
   const [filteredProducts, handleFilterButtonClick] =
     useFetchSingleFilterProducts("https://fakestoreapi.com/products");
 
@@ -82,7 +86,10 @@ const PopularProducts: React.FC = () => {
       
     </div>
   ));
-
+  console.log(isLoading);
+  console.log(isError);
+  console.log(product);
+    if(isLoading || isError) return <Loader/>
   return (
     <>
       <div className="mx-6 lg:mx-[61px]">
@@ -100,7 +107,6 @@ const PopularProducts: React.FC = () => {
             {cards}
           </Carousel>
         </div>
-
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26.56px]">
           {catProCards}
         </div>
