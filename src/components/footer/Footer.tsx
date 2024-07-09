@@ -1,43 +1,9 @@
 import { Send2 } from "iconsax-react";
 import { Headphone } from "iconsax-react";
-import { Google } from "iconsax-react";
-import { Facebook } from "iconsax-react";
-import { Whatsapp } from "iconsax-react";
 import footerImg from "../../assets/images/footerLogo.png";
+import { FOOTER_LINKS } from "../../constants/footerLinks/footerLinks";
+import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
 const Footer: React.FC = () => {
-  const socialIcons = [
-    { component: Google, key: "google" },
-    { component: Facebook, key: "facebook" },
-    { component: Whatsapp, key: "whatsapp" },
-  ];
-
-  const footerLinks = [
-    {
-      title: "Find product",
-      links: [
-        "Brownze arnold",
-        "Chronograph blue",
-        "Smart phones",
-        "Automatic watch",
-        "Hair straighteners",
-      ],
-    },
-    {
-      title: "Get help",
-      links: [
-        "About us",
-        "Contact us",
-        "Return policy",
-        "Privacy policy",
-        "Payment policy",
-      ],
-    },
-    {
-      title: "About us",
-      links: ["News", "Service", "Our policy", "Customer care", "Faq's"],
-    },
-  ];
-
   return (
     <div className="bg-quality px-[38px] w-full py-[29px] md:pt-[42px] mt-[60px]">
       <div className="bg-white md:py-[24px] py-[14px] px-[22.5px] rounded-[20px] flex flex-col md:flex-row items-center md:justify-around justify-center gap-[12px] mb-[41px]">
@@ -74,19 +40,21 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex gap-[37px] pt-[25px] border-t border-footerBorderClr">
-            {socialIcons.map(({ component: Icon, key }) => (
+            {SOCIAL_ICONS.map(({ component: Icon, key }) => (
               <Icon key={key} className="cursor-pointer" />
             ))}
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-[24px] lg:gap-[100px] md:gap-[20px] text-nowrap text-[19.38px]">
-          {footerLinks.map(({ title, links }) => (
+          {FOOTER_LINKS.map(({ title, links }) => (
             <div key={title} className="text-secondary">
               <ul className="space-y-[15px] list-disc list-inside">
                 <span className="font-semibold ">{title}</span>
                 {links.map((link, index) => (
                   <li key={index} className="text-footerLinkClr">
-                    <span className="text-secondary cursor-pointer">{link}</span>
+                    <span className="text-secondary cursor-pointer">
+                      {link}
+                    </span>
                   </li>
                 ))}
               </ul>

@@ -7,8 +7,8 @@ import ProductCard from "../productCard/productCard";
 import useGetProducts from "../../hooks/useGetProducts";
 import Loader from "../loader/Loader";
 
-const CategorySidebar: React.FC = () => {
-  const {isLoading,isError}=useGetProducts();
+const Categories: React.FC = () => {
+  const { isLoading, isError } = useGetProducts();
   const [categories] = useFetchCategories(
     "https://fakestoreapi.com/products/categories"
   );
@@ -20,7 +20,7 @@ const CategorySidebar: React.FC = () => {
     handleFilterButtonClick,
     resetFilters,
   ] = useFetchMultiFilteredProducts("https://fakestoreapi.com/products");
-  if(isLoading || isError) return <Loader/>
+  if (isLoading || isError) return <Loader />;
   return (
     <div className="flex flex-col lg:flex-row lg:gap-[20px] mx-10 mt-[20px] mb-[58.01px]">
       <div className="basis-1/5 space-y-[12px] mb-[13px]">
@@ -111,4 +111,4 @@ const CategorySidebar: React.FC = () => {
   );
 };
 
-export default CategorySidebar;
+export default Categories;

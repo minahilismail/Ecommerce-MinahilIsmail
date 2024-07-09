@@ -4,6 +4,7 @@ import laptop from "../../assets/images/laptop.png";
 import Star from "../star/Star";
 import { ShoppingCart } from "iconsax-react";
 import { Eye } from "iconsax-react";
+import { TIME } from "../../constants/products/products";
 
 const OfferProducts: React.FC = () => {
   return (
@@ -34,18 +35,14 @@ const OfferProducts: React.FC = () => {
                 <Star stars={5} />
               </div>
               <div className="flex gap-[10px]">
-                <div className="bg-quality h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
-                  57
-                </div>
-                <div className="bg-quality h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
-                  11
-                </div>
-                <div className="bg-quality h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
-                  33
-                </div>
-                <div className="bg-quality h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
-                  59
-                </div>
+                {TIME.map((time, index) => (
+                  <div
+                    key={index}
+                    className="bg-quality h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold"
+                  >
+                    {time}
+                  </div>
+                ))}
               </div>
 
               <div className="flex items-center gap-[9.84px]">

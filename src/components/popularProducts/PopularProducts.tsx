@@ -7,15 +7,17 @@ import useFetchCategories from "../../hooks/useFetchCategories";
 import usePopularProducts from "./usePopularProducts";
 import Loader from "../loader/Loader";
 import useGetProducts from "../../hooks/useGetProducts";
+import { RESPONSIVE } from "../../constants/products/products";
 
 const PopularProducts: React.FC = () => {
-  const {isLoading,isError}=useGetProducts();
+  const { isLoading, isError } = useGetProducts();
   const [categories] = useFetchCategories(
     "https://fakestoreapi.com/products/categories"
   );
-  
-  const [filteredProducts, handleFilterButtonClick] =
-    usePopularProducts("https://fakestoreapi.com/products");
+
+  const [filteredProducts, handleFilterButtonClick] = usePopularProducts(
+    "https://fakestoreapi.com/products"
+  );
 
   var i: number = 0;
   const cards = categories?.map((category) => (
@@ -27,25 +29,6 @@ const PopularProducts: React.FC = () => {
       {category}
     </div>
   ));
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1000 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 1000, min: 600 },
-      items: 3,
-    },
-    mobile: {
-      breakpoint: { max: 600, min: 0 },
-      items: 2,
-    },
-  };
 
   const catProCards = filteredProducts?.map((product) => (
     <div
@@ -71,23 +54,22 @@ const PopularProducts: React.FC = () => {
 
           <div className="flex flex-col md:flex-row md:items-center items-start md:space-y-0 space-y-1 justify-start md:justify-between font-semibold text-border1">
             <Star stars={product?.rating?.rate} />
-            <Link
-          to={`/product/${product?.id}`}>
-            <div className="text-nowrap bg-primary rounded-md p-2 text-white">View Details</div>
-        </Link>
+            <Link to={`/product/${product?.id}`}>
+              <div className="text-nowrap bg-primary rounded-md p-2 text-white">
+                View Details
+              </div>
+            </Link>
           </div>
         </div>
       </div>
-      
-        <div className="absolute top-[30px] right-[20px] w-[27.54px] h-[27.54px] rounded-[122.4px] bg-favorite flex items-center justify-center">
-          <Heart className="h-[14.45px] w-[14.45px]" />
-        </div>
-        
-      
+
+      <div className="absolute top-[30px] right-[20px] w-[27.54px] h-[27.54px] rounded-[122.4px] bg-favorite flex items-center justify-center">
+        <Heart className="h-[14.45px] w-[14.45px]" />
+      </div>
     </div>
   ));
 
-    if(isLoading || isError) return <Loader/>
+  if (isLoading || isError) return <Loader />;
   return (
     <>
       <div className="mx-6 lg:mx-[61px]">
@@ -96,7 +78,7 @@ const PopularProducts: React.FC = () => {
         </h1>
         <div className="">
           <Carousel
-            responsive={responsive}
+            responsive={RESPONSIVE}
             showDots={false}
             infinite={true}
             itemClass="px-1"

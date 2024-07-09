@@ -12,7 +12,6 @@ export type PRODUCT_ITEM = {
   };
 };
 
-
 export type CART_ITEM = {
   category: string;
   id: number;
@@ -40,22 +39,22 @@ export type STAR_RATING = {
   stars: number;
 };
 
-export type CHECKBOX_FILTER_PROPS= {
+export type CHECKBOX_FILTER_PROPS = {
   id: string;
   label: string;
   isChecked: boolean;
   count?: number;
   onClick: () => void;
-}
+};
 
 export type PRODUCT_STATE = {
   isLoading: boolean;
   isError: string | null;
-  product:PRODUCT_ITEM[]
+  product: PRODUCT_ITEM[];
 };
 
 export type CART_STATE = {
   isLoading: boolean;
   isError: string | null;
-  cart:CART_ITEM
+  cart: CART_ITEM;
 };

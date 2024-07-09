@@ -1,5 +1,5 @@
 .slick-slide {
-  padding: 0 10px; 
+  padding: 0 10px;
 }
 .slick-dots ul {
   margin-top: 20px;
@@ -11,12 +11,12 @@
 }
 
 .slick-dots li button:before {
-  color: transparent; 
+  color: transparent;
   background-color: transparent;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #eda415; 
+  color: #eda415;
   background-color: #eda415;
   border-radius: 100%;
 }

@@ -1,15 +1,8 @@
 import { ArrowDown2 } from "iconsax-react";
 import { Link } from "react-router-dom";
-
+import { NAV_LINKS } from "../../constants/navLinks/navLinks";
 const BrowseCategory: React.FC = () => {
-  const navLinks = [
-    { name: "Home", hasDropdown: true },
-    { name: "Catalog", hasDropdown: true },
-    { name: "Blog", hasDropdown: false },
-    { name: "Pages", hasDropdown: true },
-    { name: "About us", hasDropdown: false },
-  ];
-
+  
   return (
     <div className="w-full flex flex-col md:flex-row md:py-0 items-center justify-center bg-white top-[174px] gap-[20px] lg:gap-[98px] md:gap-[50px] md:justify-around">
       <Link
@@ -24,7 +17,7 @@ const BrowseCategory: React.FC = () => {
 
       <div className="flex flex-col md:flex-row items-center lg:gap-[100px] md:gap-[30px]">
         <div className="hidden lg:flex items-center gap-[29px] text-navText">
-          {navLinks.map((link,index)=>(
+          {NAV_LINKS.map((link,index)=>(
             <div key={index} className="flex items-center gap-[16px]">
             <div className="cursor-pointer">{link.name}</div>
             {link.hasDropdown &&(

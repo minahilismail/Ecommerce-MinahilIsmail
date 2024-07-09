@@ -1,8 +1,5 @@
 import Star from "../star/Star";
 import { Heart } from "iconsax-react";
-import { Google } from "iconsax-react";
-import { Facebook } from "iconsax-react";
-import { Whatsapp } from "iconsax-react";
 import { PRODUCT_ITEM } from "../../types/types";
 import { useAppDispatch } from "../../hooks/hooks";
 import { add } from "../../redux/slices/cartSlice";
@@ -10,6 +7,8 @@ import useProducts from "./useProducts";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
 import Loader from "../loader/Loader";
 import toast from "react-hot-toast";
+import { SIZES } from "../../constants/products/products";
+import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
 
 const ProductDetails: React.FC = () => {
   const [, productIdNum] = useFetchProductIdFromUrl();
@@ -37,7 +36,7 @@ const ProductDetails: React.FC = () => {
   };
 
   if (!product) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   return (
@@ -92,18 +91,14 @@ const ProductDetails: React.FC = () => {
 
             <div className="flex gap-[19.08px] items-center">
               <div>Size:</div>
-              <div className="flex items-center justify-center border border-black h-[32px] w-[63px]">
-                37
-              </div>
-              <div className="flex items-center justify-center border border-black h-[32px] w-[63px]">
-                56
-              </div>
-              <div className="flex items-center justify-center border border-black h-[32px] w-[63px]">
-                42
-              </div>
-              <div className="flex items-center justify-center border border-black h-[32px] w-[63px]">
-                48
-              </div>
+              {SIZES.map((size, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center bg-sizeColor cursor-pointer h-[32px] w-[63px]"
+                >
+                  {size}
+                </div>
+              ))}
             </div>
 
             <div className="flex gap-[19.08px] items-center">
@@ -165,14 +160,10 @@ const ProductDetails: React.FC = () => {
               <div className="text-productAttribute1 text-[18.17px] font-medium">
                 Share:{" "}
               </div>
-              <div>
-                <Google />
-              </div>
-              <div>
-                <Facebook />
-              </div>
-              <div>
-                <Whatsapp />
+              <div className="flex gap-[37px]">
+                {SOCIAL_ICONS.map(({ component: Icon, key }) => (
+                  <Icon key={key} className="cursor-pointer" />
+                ))}
               </div>
             </div>
           </div>

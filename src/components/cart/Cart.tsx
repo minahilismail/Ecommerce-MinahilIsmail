@@ -1,24 +1,12 @@
 import { CloseCircle } from "iconsax-react";
 import { ArrowDown2 } from "iconsax-react";
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { CART_ITEM } from "../../types/types";
-import {
-  adjustQuantity,
-  remove,
-  removeAll,
-} from "../../redux/slices/cartSlice";
+import { useAppDispatch } from "../../hooks/hooks";
+import { removeAll } from "../../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
+import useCart from "./useCart";
 const CartProductDetails: React.FC = () => {
   const dispatch = useAppDispatch();
-  const products = useAppSelector((state) => state?.cart);
-
-  const removeFromCart = (product: CART_ITEM) => {
-    dispatch(remove(product));
-  };
-
-  const handleQuantityChange = (productId: number, quantity: number) => {
-    dispatch(adjustQuantity({ productId, quantity }));
-  };
+  const { products, removeFromCart, handleQuantityChange } = useCart();
   let subTotal = 0;
   const cartItems = products?.map((product) => {
     subTotal += product?.quantity * product?.price;

@@ -32,7 +32,9 @@ const usePopularProducts = (
   const filterItems = () => {
     if (selectedFilters?.length > 0) {
       let tempItems = selectedFilters?.map((selectedCategory) => {
-        let temp = catPro?.filter((item) => item?.category === selectedCategory);
+        let temp = catPro?.filter(
+          (item) => item?.category === selectedCategory
+        );
         return temp;
       });
       setFilteredProducts(tempItems?.flat());
