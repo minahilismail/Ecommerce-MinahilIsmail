@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
-import { NEWS_LIST } from "../../constants/news/news";
-import { SETTINGS } from "../../constants/news/news";
+import { NEWS_LIST } from "../../constants/news";
+import { SETTINGS } from "../../constants/news";
 
 const NewsComponent: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { ArrowDown2 } from "iconsax-react";
 import { Link } from "react-router-dom";
-import { NAV_LINKS } from "../../constants/navLinks/navLinks";
+import { NAV_LINKS } from "../../constants/navLinks";
 const BrowseCategory: React.FC = () => {
   
   return (
