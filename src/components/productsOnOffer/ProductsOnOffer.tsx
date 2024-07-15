@@ -4,7 +4,7 @@ import laptop from "../../assets/images/laptop.png";
 import Star from "../star/Star";
 import { ShoppingCart } from "iconsax-react";
 import { Eye } from "iconsax-react";
-import { TIME } from "../../constants/products/products";
+import { TIME } from "../../constants/products";
 
 const OfferProducts: React.FC = () => {
   return (

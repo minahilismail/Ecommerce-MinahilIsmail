@@ -1,8 +1,8 @@
 import { Send2 } from "iconsax-react";
 import { Headphone } from "iconsax-react";
 import footerImg from "../../assets/images/footerLogo.png";
-import { FOOTER_LINKS } from "../../constants/footerLinks/footerLinks";
-import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
+import { FOOTER_LINKS } from "../../constants/footerLinks";
+import { SOCIAL_ICONS } from "../../constants/socialIcons";
 const Footer: React.FC = () => {
   return (
     <div className="bg-quality px-[38px] w-full py-[29px] md:pt-[42px] mt-[60px]">

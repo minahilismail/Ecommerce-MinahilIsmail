@@ -4,7 +4,7 @@ import useFetchCategories from "../../hooks/useFetchCategories";
 import usePopularProducts from "./usePopularProducts";
 import Loader from "../loader/Loader";
 import useGetProducts from "../../hooks/useGetProducts";
-import { RESPONSIVE } from "../../constants/products/products";
+import { RESPONSIVE } from "../../constants/products";
 import ProductCard from "../productCard/productCard";
 
 const PopularProducts: React.FC = () => {

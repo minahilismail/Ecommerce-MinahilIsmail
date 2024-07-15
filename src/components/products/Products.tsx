@@ -2,8 +2,8 @@ import Star from "../star/Star";
 import useProducts from "./useProducts";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
 import Loader from "../loader/Loader";
-import { SIZES } from "../../constants/products/products";
-import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
+import { SIZES } from "../../constants/products";
+import { SOCIAL_ICONS } from "../../constants/socialIcons";
 import WishlistIcon from "../wishlistIcon/WishlistIcon";
 
 const Products: React.FC = () => {
