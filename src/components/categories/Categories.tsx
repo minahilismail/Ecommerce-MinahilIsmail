@@ -10,7 +10,7 @@ import Loader from "../loader/Loader";
 const Categories: React.FC = () => {
   const { isLoading, isError } = useGetProducts();
   const [categories] = useFetchCategories(
-    "https://fakestoreapi.com/products/categories"
+    "/products/categories"
   );
   const [productCounts] = useCategories();
   const [
@@ -19,7 +19,7 @@ const Categories: React.FC = () => {
     filteredProducts,
     handleFilterButtonClick,
     resetFilters,
-  ] = useFetchMultiFilteredProducts("https://fakestoreapi.com/products");
+  ] = useFetchMultiFilteredProducts("/products");
   if (isLoading || isError) return <Loader />;
   return (
     <div className="flex flex-col lg:flex-row lg:gap-[20px] mx-10 mt-[20px] mb-[58.01px]">

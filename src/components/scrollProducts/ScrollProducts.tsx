@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import useScrollProducts from "./useScrollProducts";
 
 const ScrollableProducts: React.FC = () => {
-  const [products] = useScrollProducts(
-    "https://fakestoreapi.com/products?limit=6"
-  );
+  const [products] = useScrollProducts("/products?limit=6");
 
   const cards = products?.map((product) => (
     <Link

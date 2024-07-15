@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import AxiosInstance from "../../utils/instance/axiosinstance";
 
 const useCategories = (): [{ [key: string]: number }] => {
   const [productCounts, setProductCounts] = useState<{ [key: string]: number }>(
@@ -7,13 +7,13 @@ const useCategories = (): [{ [key: string]: number }] => {
   );
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products/categories")
+    AxiosInstance
+      .get("/products/categories")
       .then((response) => {
         const categories = response.data;
         categories?.forEach((category: string) => {
-          axios
-            .get(`https://fakestoreapi.com/products/category/${category}`)
+          AxiosInstance
+            .get(`/products/category/${category}`)
             .then((response) => {
               setProductCounts((prevCounts) => ({
                 ...prevCounts,

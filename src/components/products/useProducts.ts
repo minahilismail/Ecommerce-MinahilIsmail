@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { PRODUCT_ITEM } from "../../types/types";
-import axios from "axios";
 import useFetchProductIdFromUrl from "../../hooks/useFetchProductIdFromUrl";
 import { useAppDispatch } from "../../hooks/hooks";
 import { add } from "../../redux/slices/cartSlice";
 import toast from "react-hot-toast";
+import AxiosInstance from "../../utils/instance/axiosinstance";
 
 const useProducts = (
   url: string
@@ -19,7 +19,7 @@ const useProducts = (
 
   useEffect(() => {
     if (productIdNum !== undefined) {
-      axios.get(url).then((response) => {
+      AxiosInstance.get(url).then((response) => {
         setProduct({
           ...response.data,
           quantity: productInCart?.quantity || 0,

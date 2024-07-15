@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { PRODUCT_ITEM } from "../../types/types";
-import axios from "axios";
+import AxiosInstance from "../../utils/instance/axiosinstance";
 
 const usePopularProducts = (
   url: string
@@ -10,7 +10,7 @@ const usePopularProducts = (
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
   useEffect(() => {
-    axios.get(url).then((response) => {
+    AxiosInstance.get(url).then((response) => {
       setCategoriesProducts(response.data);
       setFilteredProducts(response.data);
     });

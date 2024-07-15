@@ -1,6 +1,6 @@
-import { NEWS } from "../../types/types";
-import news1 from "../../assets/images/news1.png";
-import news2 from "../../assets/images/news2.png";
+import { NEWS } from "../types/types";
+import news1 from "../assets/images/news1.png";
+import news2 from "../assets/images/news2.png";
 
 export const NEWS_LIST: NEWS[] = [
   {

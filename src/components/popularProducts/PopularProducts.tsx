@@ -9,13 +9,10 @@ import ProductCard from "../productCard/productCard";
 
 const PopularProducts: React.FC = () => {
   const { isLoading, isError } = useGetProducts();
-  const [categories] = useFetchCategories(
-    "https://fakestoreapi.com/products/categories"
-  );
+  const [categories] = useFetchCategories("/products/categories");
 
-  const [filteredProducts, handleFilterButtonClick] = usePopularProducts(
-    "https://fakestoreapi.com/products"
-  );
+  const [filteredProducts, handleFilterButtonClick] =
+    usePopularProducts("/products");
 
   var i: number = 0;
   const cards = categories?.map((category) => (

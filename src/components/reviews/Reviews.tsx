@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/carousel.css";
-import { REVIEWS, SETTINGS } from "../../constants/review/review";
+import { REVIEWS, SETTINGS } from "../../constants/review";
 
 const ReviewCarousel: React.FC = () => {
   return (

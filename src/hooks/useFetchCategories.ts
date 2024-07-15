@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import AxiosInstance from "../utils/instance/axiosinstance";
 
 const useFetchCategories = (url: string): [string[]] => {
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    axios.get(url).then((response) => setCategories(response.data));
+    AxiosInstance.get(url).then((response) => setCategories(response.data));
   }, []);
   return [categories];
 };

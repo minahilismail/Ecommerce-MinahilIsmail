@@ -15,7 +15,7 @@ const Products: React.FC = () => {
     addToCart,
     handleIncrement,
     handleDecrement,
-  } = useProducts(`https://fakestoreapi.com/products/${productIdNum}`);
+  } = useProducts(`/products/${productIdNum}`);
 
   if (!product) {
     return <Loader />;
@@ -114,7 +114,7 @@ const Products: React.FC = () => {
               <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center px-[37px] py-[19.5px] font-semibold">
                 Buy it now
               </button>
-              <button>
+              <button className="relative mb-24">
                 <WishlistIcon product={product} />
               </button>
             </div>
