@@ -1,19 +1,12 @@
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { adjustQuantity, remove } from "../../redux/slices/cartSlice";
-import { CART_ITEM } from "../../types/types";
+import { useAppDispatch } from "../../hooks/hooks";
+import { removeAll } from "../../redux/slices/cartSlice";
 
 const useCart = () => {
-  const dispatch = useAppDispatch();
-  const products = useAppSelector((state) => state?.cart);
+    const dispatch = useAppDispatch();
 
-  const removeFromCart = (product: CART_ITEM) => {
-    dispatch(remove(product));
-  };
-
-  const handleQuantityChange = (productId: number, quantity: number) => {
-    dispatch(adjustQuantity({ productId, quantity }));
-  };
-  let subTotal = 0;
-  return { products, removeFromCart, handleQuantityChange, subTotal };
+    const handleRemoveAll = () => {
+        dispatch(removeAll())
+      };
+      return {handleRemoveAll};
 };
 export default useCart;

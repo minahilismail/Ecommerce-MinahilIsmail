@@ -33,16 +33,16 @@ const NewsComponent: React.FC = () => {
 
               <div className="mt-4">
                 <div className="text-navColor text-[15.98px] font-medium">
-                  {news.date}
+                  {news?.date}
                 </div>
                 <div className="mt-2 text-[16px] font-semibold">
-                  {news.title}
+                  {news?.title}
                 </div>
                 <div className="mt-2 text-[14px] text-gray-600">
-                  {news.news}
+                  {news?.news}
                 </div>
                 <div className="mt-2 text-[14px] font-medium">
-                  {news.company}
+                  {news?.company}
                 </div>
               </div>
             </div>

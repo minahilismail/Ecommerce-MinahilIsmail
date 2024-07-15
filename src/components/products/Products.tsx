@@ -7,12 +7,16 @@ import { SOCIAL_ICONS } from "../../constants/socialIcons/socialIcons";
 import WishlistIcon from "../wishlistIcon/WishlistIcon";
 
 const Products: React.FC = () => {
-    const [, productIdNum] = useFetchProductIdFromUrl();
+  const [, productIdNum] = useFetchProductIdFromUrl();
 
-  const {product, quantityCount,addToCart,handleIncrement,handleDecrement} = useProducts(
-    `https://fakestoreapi.com/products/${productIdNum}`
-  );
-  
+  const {
+    product,
+    quantityCount,
+    addToCart,
+    handleIncrement,
+    handleDecrement,
+  } = useProducts(`https://fakestoreapi.com/products/${productIdNum}`);
+
   if (!product) {
     return <Loader />;
   }
@@ -110,7 +114,9 @@ const Products: React.FC = () => {
               <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center px-[37px] py-[19.5px] font-semibold">
                 Buy it now
               </button>
-              <button><WishlistIcon product={product} /></button>
+              <button>
+                <WishlistIcon product={product} />
+              </button>
             </div>
           </div>
 
