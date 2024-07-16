@@ -1,20 +1,25 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import AxiosInstance from '../../utils/instance/axiosinstance';
-import { PRODUCT_ITEM } from '../../types/types';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import AxiosInstance from "../../utils/instance/axiosinstance";
+import { PRODUCT_ITEM } from "../../types/types";
 
-// Async thunks to fetch data
-export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await AxiosInstance.get('/products');
-  return response.data;
-});
+export const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
+  async () => {
+    const response = await AxiosInstance.get("/products");
+    return response.data;
+  }
+);
 
-export const fetchCategories = createAsyncThunk('products/fetchCategories', async () => {
-  const response = await AxiosInstance.get('/products/categories');
-  return response.data;
-});
+export const fetchCategories = createAsyncThunk(
+  "products/fetchCategories",
+  async () => {
+    const response = await AxiosInstance.get("/products/categories");
+    return response.data;
+  }
+);
 
 const popularProductsSlice = createSlice({
-  name: 'popularProducts',
+  name: "popularProducts",
   initialState: {
     items: [] as PRODUCT_ITEM[],
     categories: [] as string[],
@@ -27,12 +32,16 @@ const popularProductsSlice = createSlice({
     toggleCategoryFilter: (state, action) => {
       const category = action.payload;
       if (state.selectedFilters.includes(category)) {
-        state.selectedFilters = state.selectedFilters.filter((cat) => cat !== category);
+        state.selectedFilters = state.selectedFilters.filter(
+          (cat) => cat !== category
+        );
       } else {
         state.selectedFilters.push(category);
       }
       state.filteredItems = state.selectedFilters.length
-        ? state.items.filter((item) => state.selectedFilters.includes(item.category))
+        ? state.items.filter((item) =>
+            state.selectedFilters.includes(item.category)
+          )
         : state.items;
     },
   },

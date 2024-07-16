@@ -23,7 +23,7 @@ function App() {
         ></Route>
         <Route path="/category" element={<CategoriesPage />}></Route>
         <Route path="/category/:category" element={<CategoriesPage />} />
-        <Route path="/wishlist" element={<WishlistPage/>}></Route>
+        <Route path="/wishlist" element={<WishlistPage />}></Route>
       </Route>
     )
   );

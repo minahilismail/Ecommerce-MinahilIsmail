@@ -2,7 +2,8 @@ import { CloseCircle } from "iconsax-react";
 import useSingleCartItem from "./useSingleCartItem";
 
 const SingleCartItem: React.FC = () => {
-  const { products, removeFromCart, handleQuantityChange } = useSingleCartItem();
+  const { products, removeFromCart, handleQuantityChange } =
+    useSingleCartItem();
 
   return (
     <div>
@@ -34,9 +35,7 @@ const SingleCartItem: React.FC = () => {
             </button>
           </div>
           <div className="flex flex-row justify-between lg:justify-start gap-[25px] lg:gap-[82px]">
-            <div className="hidden lg:flex">
-              ${product?.price?.toFixed(2)}
-            </div>
+            <div className="hidden lg:flex">${product?.price?.toFixed(2)}</div>
             <div className="flex items-center justify-start">
               <button
                 onClick={() =>

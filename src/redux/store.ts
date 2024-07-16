@@ -9,7 +9,7 @@ export const store = configureStore({
     cart: cartSlice,
     products: productSlice,
     wishlist: wishlistSlice,
-    popularProducts:popularProductsSlice
+    popularProducts: popularProductsSlice,
   },
 });
 

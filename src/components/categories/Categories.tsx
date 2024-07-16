@@ -9,9 +9,7 @@ import Loader from "../loader/Loader";
 
 const Categories: React.FC = () => {
   const { isLoading, isError } = useGetProducts();
-  const [categories] = useFetchCategories(
-    "/products/categories"
-  );
+  const [categories] = useFetchCategories("/products/categories");
   const [productCounts] = useCategories();
   const [
     selectedFilters,

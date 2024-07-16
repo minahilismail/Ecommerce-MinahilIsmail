@@ -57,7 +57,10 @@ const Navbar: React.FC = () => {
                   </div>
                   <div className="text-white hidden md:flex">Sign in</div>
                 </div>
-                <Link to="/wishlist" className="flex cursor-pointer items-center gap-[12px]">
+                <Link
+                  to="/wishlist"
+                  className="flex cursor-pointer items-center gap-[12px]"
+                >
                   <div className="flex items-center">
                     <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer  transition-all duration-200">
                       <Heart />

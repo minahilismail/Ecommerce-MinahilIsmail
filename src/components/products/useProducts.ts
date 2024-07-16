@@ -6,10 +6,8 @@ import { add } from "../../redux/slices/cartSlice";
 import toast from "react-hot-toast";
 import AxiosInstance from "../../utils/instance/axiosinstance";
 
-const useProducts = (
-  url: string
-) => {
-  const dispatch =useAppDispatch();
+const useProducts = (url: string) => {
+  const dispatch = useAppDispatch();
   const [productInCart, productIdNum] = useFetchProductIdFromUrl();
   const [product, setProduct] = useState<PRODUCT_ITEM | null>(null);
 
@@ -46,7 +44,12 @@ const useProducts = (
     }
   };
 
-
-  return {product, quantityCount,addToCart,handleIncrement,handleDecrement};
+  return {
+    product,
+    quantityCount,
+    addToCart,
+    handleIncrement,
+    handleDecrement,
+  };
 };
 export default useProducts;

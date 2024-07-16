@@ -14,7 +14,10 @@ const useSingleCartItem = () => {
     dispatch(adjustQuantity({ productId, quantity }));
   };
 
-  const subTotal = products.reduce((total, product) => total + product.quantity * product.price, 0);
+  const subTotal = products.reduce(
+    (total, product) => total + product.quantity * product.price,
+    0
+  );
 
   return { products, removeFromCart, handleQuantityChange, subTotal };
 };
