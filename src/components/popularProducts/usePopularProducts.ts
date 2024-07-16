@@ -1,47 +1,32 @@
-import { useEffect, useState } from "react";
-import { PRODUCT_ITEM } from "../../types/types";
-import AxiosInstance from "../../utils/instance/axiosinstance";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import {
+  fetchCategories,
+  fetchProducts,
+  toggleCategoryFilter,
+} from "../../redux/slices/popularProductsSlice";
 
-const usePopularProducts = (
-  url: string
-): [PRODUCT_ITEM[], (selectedCategory: string) => void] => {
-  const [catPro, setCategoriesProducts] = useState<PRODUCT_ITEM[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<PRODUCT_ITEM[]>([]);
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-
-  useEffect(() => {
-    AxiosInstance.get(url).then((response) => {
-      setCategoriesProducts(response.data);
-      setFilteredProducts(response.data);
-    });
-  }, []);
-
-  const handleFilterButtonClick = (selectedCategory: string) => {
-    if (selectedFilters?.includes(selectedCategory)) {
-      let filters = selectedFilters?.filter((el) => el !== selectedCategory);
-      setSelectedFilters(filters);
-    } else {
-      setSelectedFilters([selectedCategory]);
-    }
-  };
+const usePopularProducts = () => {
+  const dispatch = useAppDispatch();
+  const { categories, filteredItems, isLoading, isError } = useAppSelector(
+    (state) => state.popularProducts
+  );
 
   useEffect(() => {
-    filterItems();
-  }, [selectedFilters]);
+    dispatch(fetchProducts());
+    dispatch(fetchCategories());
+  }, [dispatch]);
 
-  const filterItems = () => {
-    if (selectedFilters?.length > 0) {
-      let tempItems = selectedFilters?.map((selectedCategory) => {
-        let temp = catPro?.filter(
-          (item) => item?.category === selectedCategory
-        );
-        return temp;
-      });
-      setFilteredProducts(tempItems?.flat());
-    } else {
-      setFilteredProducts([...catPro]);
-    }
+  const handleFilterButtonClick = (category: string) => {
+    dispatch(toggleCategoryFilter(category));
   };
-  return [filteredProducts, handleFilterButtonClick];
+
+  return {
+    categories,
+    filteredItems,
+    isLoading,
+    isError,
+    handleFilterButtonClick,
+  };
 };
 export default usePopularProducts;
