@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div
       key={product.id}
       className="relative rounded-[19.67px] px-[13.28px] py-[22.74px] border border-borderClr2 overflow-hidden shadow-lg"
-      style={{ width: "308.83px",height: "313.75px" }}
+      style={{ height: "313.75px" }}
     >
       <Link
         to={`/product/${product.id}`}

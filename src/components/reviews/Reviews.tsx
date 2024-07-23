@@ -7,17 +7,17 @@ import { REVIEWS, SETTINGS } from "../../constants/review";
 
 const ReviewCarousel: React.FC = () => {
   return (
-    <div className="ml-[61px] mr-[60.63px]">
+    <div className="md:ml-[61px] md:mr-[60.63px] mx-[22px]">
     <Slider
       {...SETTINGS}
-      className="flex gap-[10px] items-center mb-[24px] mx-6 md:mx-0"
+      className="flex gap-[10px] items-center"
     >
       {REVIEWS.map((review, index) => (
         <div
           key={index}
-          className="border border-reviewBorder rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mb-[47.9px]"
+          className="border border-reviewBorder rounded-[20px] md:py-[16.83px] md:pl-[16.83px] md:pr-[20.56px] py-[27.4px] px-[19.5px] md:mb-[47.9px] mb-[24px]"
         >
-          <div className="flex gap-[37.39px] items-center">
+          <div className="flex md:flex-row flex-col md:gap-[37.39px] gap-[26.17px] items-center">
             <img
               className="border-[1.87px] border-dashed border-primary rounded-full p-1"
               width={"86.93px"}
@@ -29,7 +29,7 @@ const ReviewCarousel: React.FC = () => {
               {review.fullName}
             </h3>
           </div>
-          <div className="text-wrap bg-quality mt-[26.17px] text-ellipsis py-[11.3px] px-[26.64px] rounded-[18.7px]">
+          <div className="text-wrap bg-quality mt-[26.17px] text-ellipsis md:py-[11.3px] py-[18.5px] px-[20px] md:px-[26.64px] rounded-[18.7px]">
             {review.review}
           </div>
         </div>

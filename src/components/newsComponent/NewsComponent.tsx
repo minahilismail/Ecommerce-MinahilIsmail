@@ -9,14 +9,14 @@ import { SETTINGS } from "../../constants/news";
 const NewsComponent: React.FC = () => {
   return (
     <>
-    <div className="mb-[101px]">
-      <div className="flex items-center justify-between mx-6 lg:ml-[61px] lg:mr-[62px] mb-[52px]">
+    <div className="md:mb-[101px]">
+      <div className="flex mx-6 items-center justify-between lg:ml-[61px] lg:mr-[62px] md:mb-[52px] mb-[23px]">
         <div className="text-secondary text-[25.38px] leading-[38.07px] font-semibold">
           Latest news
         </div>
         <div className="text-secondary text-[20.38px] leading-[30.57px] font-medium">View all</div>
       </div>
-      <div className="mx-6 lg:mx-[60px]">
+      <div className="mx-[7px] lg:mx-[60px]">
       <Slider
         {...SETTINGS}
         className="flex gap-[20px]"
@@ -24,26 +24,26 @@ const NewsComponent: React.FC = () => {
         {NEWS_LIST.map((news, index) => (
           <div
             key={index}
-            className=" border border-reviewBorder rounded-[20px] px-[16.5px] py-[34.5px] mb-[40px]"
+            className=" border border-reviewBorder rounded-[20px] md:px-[16.5px] px-[11.5px] md:py-[34.5px] py-[21px] md:mb-[40px] mb-[43px]"
           >
             <div className="lg:flex gap-[34px]">
               <img
-                className="rounded-[20px] h-[288px] w-full object-cover"
+                className="rounded-[20px] h-[288px] w-full object-contain"
                 src={news.image}
                 alt={news.title}
               />
 
-              <div className="text-secondary">
-                <div className=" border border-borderClr7 rounded-[20px] flex items-center justify-center w-[147px] h-[41px] text-[20.38px] font-medium">
+              <div className="text-secondary md:mx-0 mx-[26.5px]">
+                <div className=" border border-borderClr7 rounded-[20px] flex items-center justify-center w-[147px] h-[41px] text-[20.38px] font-medium md:mt-0 mt-[34px]">
                   {news?.date}
                 </div>
                 <div className="mt-2 text-[16px] font-semibold">
                   {news?.title}
                 </div>
-                <div className="mt-2 text-[14px] text-navColor">
+                <div className="mt-[16px] text-[14px] text-navColor">
                   {news?.news}
                 </div>
-                <div className="text-navColor mt-2 text-[14px] font-medium">
+                <div className="text-navColor md:mt-[43px] mt-[16px] text-[14px] font-medium">
                   {news?.company}
                 </div>
               </div>

@@ -184,7 +184,7 @@ const Categories: React.FC = () => {
         <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
       </div>
       <div className="lg:basis-3/4 md:basis-4/5 ">
-      <div className="grid grid-cols-3 gap-[26.56px] xl:justify-start md:justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26.56px] xl:justify-start md:justify-center">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

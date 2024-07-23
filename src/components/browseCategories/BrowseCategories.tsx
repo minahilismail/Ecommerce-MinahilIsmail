@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { NAV_LINKS } from "../../constants/navLinks";
 const BrowseCategory: React.FC = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row md:py-0 items-center justify-center md:justify-normal bg-white top-[174px] gap-[20px] lg:gap-[98px] md:gap-[50px] md:px-[63px]">
+    <div className="w-full flex flex-col md:flex-row md:py-0 items-center justify-center md:justify-normal bg-white top-[174px] gap-[8px] lg:gap-[98px] md:gap-[50px] md:px-[63px]">
       <Link
         to="/category"
-        className="cursor-pointer px-[23px] py-[14.5px] flex text-nowrap items-center justify-center lg:h-[70px] w-[218px] h-[70px] lg:w-[218px] md:h-[65px] md:w-[200px] gap-[16px] bg-primary md:mt-0 mt-[20px]"
+        className="cursor-pointer py-[23px] px-[14px] flex text-nowrap items-center justify-center lg:h-[70px] w-[218px] h-[70px] lg:w-[218px] md:h-[65px] md:w-[200px] gap-[16px] bg-primary md:mt-0 mt-[20px]"
       >
         <div className="text-white md:text-[16px] font-medium">Browse categories</div>
         <div className="text-white">

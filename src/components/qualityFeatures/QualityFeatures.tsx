@@ -4,8 +4,8 @@ import { ShieldSecurity } from "iconsax-react";
 
 const QualityFeatures: React.FC = () => {
   return (
-    <div className="py-[44.5px] md:h-[155px] bg-quality md:rounded-[20px] md:mx-[30px] lg:ml-[51px] lg:mr-[61px] flex md:flex-row flex-col lg:gap-[104px] md-gap-[30px] gap-[42.5px] items-center justify-center md:mt-[75px] mb-[27px] md:mb-[75px]">
-      <div className="flex lg:gap-[31px] md:gap-[10px] items-center">
+    <div className="md:py-[44.5px] py-[33px] md:h-[155px] bg-quality md:rounded-[20px] md:mx-[30px] lg:ml-[51px] lg:mr-[61px] flex md:flex-row flex-col lg:gap-[104px] md-gap-[30px] gap-[42.5px] lg:px-[118px] px-[26px] md:mt-[75px] mb-[27px] md:mb-[75px]">
+      <div className="flex gap-[31px] lg:gap-[31px] md:gap-[10px] items-center">
         <div>
           <BoxTick
             color="#EDA415"

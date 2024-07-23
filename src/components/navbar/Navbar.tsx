@@ -13,17 +13,17 @@ const Navbar: React.FC = () => {
   const wishlistItems = useAppSelector((state) => state.wishlist.length);
   return (
     <div className="bg-white w-full">
-      <div className="text-center md:pt-[21px] md:pb-[29px] md:pl-[61px] md:pr-[49px] md:flex items-center md:justify-between justify-center">
-        <div className="px-2 py-3 md:p-0">Need help? Call us: <span className="cursor-pointer">(+98) 0234 456 789</span></div>
+      <div className="text-center text-[14px] md:pt-[21px] md:pb-[29px] md:pl-[61px] md:pr-[49px] md:flex items-center md:justify-between justify-center px-[36px] py-[16px]">
+        <div className="pb-[8px] text-nowrap md:p-0">Need help? Call us: <span className="cursor-pointer">(+98) 0234 456 789</span></div>
         <div className="flex items-center cursor-pointer justify-center gap-[36px]">
-          <div className="flex items-center gap-[20px]">
+          <div className="flex text-nowrap items-center gap-[20px]">
             <div>
               <Location />
             </div>
             <div>Our Store</div>
           </div>
 
-          <div className="flex items-center gap-[20px]">
+          <div className="flex text-nowrap items-center gap-[20px]">
             <div>
               <Truck />
             </div>
@@ -31,13 +31,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="bg-navColor w-full top-[74px] sticky">
-        <div className="px-[67.79px] py-[21px]">
+      <div className="bg-navColor w-full top-[74px] sticky md:px-[67.79px] md:py-[21px] px-[20.79px] py-[16px]">
+        <div className="">
           <div className="flex justify-between items-center gap-[24px]">
             <div className="flex gap-[85px] items-center">
-              <Link to={"/"}>
+              <Link to={"/"} className="flex items-center justify-center md:w-[140px] w-[145px] h-[38px] md:h-[39px]">
                 <img
-                  className="md:w-[140px] w-[145px] h-[38px] md:h-[39px] cursor-pointer object-contain"
+                  className="md:w-[140px] w-[100.5px] h-[28px] md:h-[39px] cursor-pointer object-contain"
                   src={logo}
                   alt="logo"
                 />

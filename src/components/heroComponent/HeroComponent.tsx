@@ -1,11 +1,11 @@
 import cannonCamera from "../../assets/images/cannonCamera.png";
 const Home: React.FC = () => {
   return (
-    <div className="pl-[174px] lg:pr-[146px] md:pr-[100px] flex flex-col-reverse md:flex-row items-center justify-center md:justify-normal md:gap-[100px] lg:gap-[449px] bg-white sm:rounded-lg mt-[38px]">
+    <div className="lg:pl-[174px] lg:pr-[146px] md:pr-[100px] flex flex-col-reverse md:flex-row items-center justify-center md:justify-normal md:gap-[100px] lg:gap-[449px] bg-white sm:rounded-lg mt-[42px] md:mt-[38px] mx-6 lg:mx-0 ">
       <div className="w-full md:w-auto flex items-center justify-between">
-        <div className="w-full flex flex-col md:items-start items-center justify-center mx-6 lg:mx-0">
+        <div className="w-full flex flex-col md:items-start items-center justify-center">
           <div className="">
-            <div className="block md:hidden text-[36px] md:text-[43px] leading-9 text-secondary text-center font-bold">
+            <div className="flex md:hidden text-[36px] md:text-[43px] leading-9 text-secondary text-center text-nowrap font-bold">
               Canon camera
             </div>
             <div className="hidden md:block text-[36px] md:text-[43px] leading-[64.5px] text-secondary font-bold">
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full mt-[19px] flex flex-col gap-[21px] text-center space-y-3 md:flex-row md:space-y-0">
+          <div className="w-full mt-[19px] flex flex-col md:gap-[21px] text-center space-y-[16px] md:flex-row md:space-y-0">
             <button className="w-full md:w-auto items-center text-nowrap justify-center px-[32px] py-[18.5px] border border-transparent text-[16px] font-semibold rounded-[20px] shadow-sm text-white bg-primary hover:bg-brandOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Shop now
             </button>
@@ -32,9 +32,9 @@ const Home: React.FC = () => {
       </div>
       <div className="flex items-center justify-center ">
         <div className="flex items-center">
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 items-center justify-center">
             <img
-              className="h-[250px] w-[210px] sm:h-[300px] sm:w-[270.16px] lg:h-[335px] lg:w-[345px] md:h-[310px] md:w-[290px] items-center object-contain"
+              className="h-[311px] w-[289.16px] sm:h-[300px] sm:w-[270.16px]  lg:h-[335px] lg:w-[345px] md:h-[310px] md:w-[290px] items-center object-contain"
               src={cannonCamera}
               alt="Canon camera"
             />
