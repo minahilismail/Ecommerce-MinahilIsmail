@@ -13,7 +13,7 @@ const CheckboxFilter: React.FC<CHECKBOX_FILTER_PROPS> = ({
       <div className="flex items-center gap-[10px]">
         <input
           id={id}
-          className="text-favorite w-[25px] h-[25px] rounded-[8px] bg-favorite"
+          className="text-favorite w-[30px] h-[30px] rounded-[8px] bg-favorite"
           type="checkbox"
           checked={isChecked}
           onClick={onClick}

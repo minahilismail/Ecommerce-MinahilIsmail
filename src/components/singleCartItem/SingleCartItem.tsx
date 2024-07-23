@@ -10,7 +10,7 @@ const SingleCartItem: React.FC = () => {
       {products?.map((product) => (
         <div
           key={product?.id}
-          className="mt-[29px] pb-[26px] border-b border-border2 px-[15px] flex flex-col lg:flex-row lg:items-center justify-start lg:gap-[200px] gap-[50px]"
+          className="mt-[25px] pb-[26px] border-b border-border2 flex flex-col lg:flex-row lg:items-center justify-start lg:gap-[200px] xl:gap-[73px] gap-[50px]"
         >
           <div className="flex justify-between items-center">
             <div className="flex gap-[21px] items-center">
@@ -20,7 +20,7 @@ const SingleCartItem: React.FC = () => {
                 alt=""
               />
               <div className="text-nowrap flex flex-col gap-[11px]">
-                <div className="font-semibold text-wrap text-ellipsis text-[20.68px] max-h-16 max-w-32 truncate leading-[31.02px] text-navColor">
+                <div className="font-semibold text-wrap text-ellipsis text-[20.68px] max-h-16  max-w-32 truncate leading-[31.02px] text-navColor">
                   {product?.title}
                 </div>
                 <div>Color: Green</div>
@@ -34,7 +34,7 @@ const SingleCartItem: React.FC = () => {
               <CloseCircle />
             </button>
           </div>
-          <div className="flex flex-row justify-between lg:justify-start gap-[25px] lg:gap-[82px]">
+          <div className="flex flex-row justify-between lg:justify-start gap-[25px] lg:gap-[82px] xl:gap-[73px]">
             <div className="hidden lg:flex">${product?.price?.toFixed(2)}</div>
             <div className="flex items-center justify-start">
               <button

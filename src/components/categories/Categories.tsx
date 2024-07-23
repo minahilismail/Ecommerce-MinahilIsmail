@@ -20,8 +20,8 @@ const Categories: React.FC = () => {
   ] = useFetchMultiFilteredProducts("/products");
   if (isLoading || isError) return <Loader />;
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-[20px] mx-10 mt-[20px] mb-[58.01px]">
-      <div className="basis-1/5 space-y-[12px] mb-[13px]">
+    <div className="flex flex-col lg:flex-row lg:gap-[20px] mr-[64.4px] ml-[61px] mt-[103px] mb-[58.01px]">
+      <div className="lg:basis-1/4 md:basis-1/5 space-y-[12px] mb-[13px]">
         <div className="flex items-center justify-between">
           <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
             Categories
@@ -56,6 +56,12 @@ const Categories: React.FC = () => {
           <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
             Availability
           </div>
+          <div className="flex justify-between ">
+            <div>0 selected</div>
+            <div className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
+              Reset
+            </div>
+          </div>
           <CheckboxFilter
             id="inStock"
             label="In stock"
@@ -77,6 +83,31 @@ const Categories: React.FC = () => {
           <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
             Product type
           </div>
+          <div className="flex justify-between ">
+            <div>0 selected</div>
+            <div className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
+              Reset
+            </div>
+          </div>
+          <CheckboxFilter
+            id="smartWatch"
+            label="Smart-watch"
+            isChecked={false}
+            count={5}
+            onClick={() => {}}
+          />
+        </div>
+        <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
+        <div className="hidden lg:flex flex-col gap-[12px]">
+          <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
+            Brand
+          </div>
+          <div className="flex justify-between ">
+            <div>0 selected</div>
+            <div className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
+              Reset
+            </div>
+          </div>
           <CheckboxFilter
             id="smartWatch"
             label="Smart-watch"
@@ -89,21 +120,75 @@ const Categories: React.FC = () => {
 
         <div className="hidden lg:flex flex-col gap-[12px]">
           <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
-            Price
+            Color
+          </div>
+          <div className="flex justify-between ">
+            <div>0 selected</div>
+            <div className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
+              Reset
+            </div>
+          </div>
+          <div className="flex gap-[22px]">
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-primary"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-red-600"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-green-700"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-pink-800"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-blue-600"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-purple-700"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-yellow-500"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-black"></div>
+            <div className="w-[15px] h-[16px] rounded-full cursor-pointer bg-gray-500"></div>
+          </div>
+        </div>
+        <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
+
+        <div className="hidden lg:flex flex-col gap-[12px]">
+          <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
+            Size
+          </div>
+          <div className="flex justify-between ">
+            <div>0 selected</div>
+            <div className="cursor-pointer text-catFilterClr text-[15.09px] font-normal leading-[22.64px]">
+              Reset
+            </div>
           </div>
           <CheckboxFilter
-            id="under10"
-            label="Under $10"
+            id="smartWatch"
+            label="M"
+            isChecked={false}
+            count={5}
+            onClick={() => {}}
+          />
+          <CheckboxFilter
+            id="smartWatch"
+            label="S"
+            isChecked={false}
+            count={5}
+            onClick={() => {}}
+          />
+          <CheckboxFilter
+            id="smartWatch"
+            label="X"
+            isChecked={false}
+            count={5}
+            onClick={() => {}}
+          />
+          <CheckboxFilter
+            id="smartWatch"
+            label="XX"
             isChecked={false}
             count={5}
             onClick={() => {}}
           />
         </div>
+        <hr className="hidden lg:flex mb-[13px] mt-[26px] h-[2px] bg-borderColor" />
       </div>
-      <div className="basis-4/5 flex flex-wrap gap-[20px] justify-center">
+      <div className="lg:basis-3/4 md:basis-4/5 ">
+      <div className="grid grid-cols-3 gap-[26.56px] xl:justify-start md:justify-center">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+      </div>
       </div>
     </div>
   );

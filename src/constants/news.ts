@@ -7,14 +7,14 @@ export const NEWS_LIST: NEWS[] = [
     date: "22,oct,2021",
     image: news1,
     title: "Who avoids a pain that produces?",
-    news: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iste obcaecati deleniti alias assumenda architecto, est similique! Sed ducimus suscipit aut iste non quia atque, aperiam qui cumque. Dolore.",
+    news: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos assumenda architecto, est similique!",
     company: "By spacing tech",
   },
   {
     date: "22,oct,2021",
     image: news2,
     title: "Who avoids a pain that produces?",
-    news: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos iste obcaecati deleniti alias assumenda architecto, est similique! Sed ducimus suscipit aut iste non quia atque, aperiam qui cumque. Dolore.",
+    news: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos assumenda architecto, est similique!",
     company: "By spacing tech",
   },
 ];

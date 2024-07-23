@@ -36,9 +36,11 @@ const colors = {
   borderClr4: "#8F8F8F",
   borderClr5: "#B8B8B8",
   borderClr6: "#B6B6B6",
+  borderClr7: "#D4D4D4",
   skyBlueClr: "#87BCD9",
   cartBrownClr: "#272727",
   creamClr: "#EAEAEA",
   sizeColor: "#EEEEEE",
+  breadCrumClr: "#3A3A3A",
 };
 export default colors;

@@ -5,6 +5,7 @@ import Loader from "../loader/Loader";
 import { SIZES } from "../../constants/products";
 import { SOCIAL_ICONS } from "../../constants/socialIcons";
 import WishlistIcon from "../wishlistIcon/WishlistIcon";
+import RelatedProducts from "../relatedProducts/RelatedProducts";
 
 const Products: React.FC = () => {
   const [, productIdNum] = useFetchProductIdFromUrl();
@@ -22,7 +23,7 @@ const Products: React.FC = () => {
   }
 
   return (
-    <div className="lg:mx-[63px] mx-6 ">
+    <div className="lg:mx-[63px] mt-[22px] mb-[100.25px] mx-6 ">
       <div className="flex flex-col lg:flex-row lg:gap-[49px] mt-[22px] items-center justify-center lg:items-start">
         <div className="basis-1/2">
           <img
@@ -63,6 +64,7 @@ const Products: React.FC = () => {
           <hr className="mb-[40px] h-[1px] bg-borderColor" />
 
           <div className="flex flex-col gap-[42px]">
+          <div className="flex flex-col gap-[26px]">
             <div className="flex items-center gap-[19.08px]">
               <div className="text-[18.17px] font-medium">Color: </div>
               <div className="flex gap-[14.59px]">
@@ -103,8 +105,9 @@ const Products: React.FC = () => {
                 </button>
               </div>
             </div>
+            </div>
 
-            <div className="flex flex-col md:flex-row items-center md:gap-0 gap-6 md:justify-between mt-[31px]">
+            <div className="flex flex-col md:flex-row items-center md:gap-[29px] gap-6 md:justify-between">
               <button
                 onClick={() => addToCart(product)}
                 className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center px-[37px] py-[19.5px] font-semibold"
@@ -114,8 +117,8 @@ const Products: React.FC = () => {
               <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center px-[37px] py-[19.5px] font-semibold">
                 Buy it now
               </button>
-              <button className="relative mb-24">
-                <WishlistIcon product={product} />
+              <button className="relative mb-24 ">
+                <WishlistIcon product={product} bgColor={false} large={true} />
               </button>
             </div>
           </div>
@@ -152,7 +155,7 @@ const Products: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex md:gap-[20px] gap-[10px] items-center md:justify-center justify-start mt-[78px] mb-[35px]">
+      <div className="flex md:gap-[20px] gap-[10px] items-center md:justify-center justify-start mt-[75px] mb-[35px]">
         <button className="md:rounded-[15px] rounded-[10px] text-descColor text-[15.68px] md:text-[20.68px] leading-[31.02px] flex items-center justify-center font-medium md:px-[34px] md:py-[14.5px] px-[10px] py-[5px] border border-borderClr4">
           Description
         </button>
@@ -161,13 +164,15 @@ const Products: React.FC = () => {
         </button>
       </div>
 
-      <div className="md:mb-[64px] mb-[10px] border rounded-[20px] border-borderClr5 md:py-[25.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
+      <div className="md:mb-[64px] mb-[10px] border rounded-[20px] border-borderClr5 md:py-[42.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
         <div>Customer reviews</div>
         <div>No reviews yet</div>
         <button className="bg-navColor text-white underline flex items-center justify-center px-[20px] py-[5px]">
           Write a review
         </button>
       </div>
+
+      <div><RelatedProducts category={product.category}/></div>
     </div>
   );
 };

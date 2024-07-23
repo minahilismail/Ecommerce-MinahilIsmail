@@ -11,9 +11,9 @@ const ScrollableProducts: React.FC = () => {
     <Link
       to={`/product/${product?.id}`}
       key={product?.id}
-      className="relative h-[147px] flex px-4 sm:px-[43.14px] py-[26.5px] items-center mb-9 rounded-[20px] border border-borderClr2 overflow-hidden shadow-lg mx-auto"
+      className="relative h-[147px] flex px-[43.14px] py-[26.5px] items-center rounded-[20px] border border-borderClr2 overflow-hidden"
     >
-      <div className="flex justify-center items-center gap-4 sm:gap-[43.35px] md:px-0 px-5">
+      <div className="flex justify-center items-center gap-[43.35px] md:px-0 px-5">
         <img
           className="sm:h-[94px] sm:w-[154px] h-[90px] w-[70px] object-contain"
           src={product?.image}
@@ -69,8 +69,8 @@ const ScrollableProducts: React.FC = () => {
   };
 
   return (
-    <div className="mx-6 lg:mx-[109px]">
-      <Carousel
+    <div className="mx-6 lg:mx-[109px] mb-[78px] mt-[52px]">
+      <Carousel className="flex gap-[39px]"
         responsive={responsive}
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}

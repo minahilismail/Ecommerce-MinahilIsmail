@@ -9,7 +9,7 @@ const CartProductDetails: React.FC = () => {
   const { handleRemoveAll } = useCart();
 
   return (
-    <div className="flex flex-col lg:flex-row gap-[20px] lg:mx-[61px] mx-6 mb-[96px] mt-[31px]">
+    <div className="flex flex-col xl:flex-row gap-[20px] lg:mx-[61px] mx-6 mb-[96px] mt-[31px]">
       <div className="basis-3/5 ">
         <div className=" hidden lg:flex bg-quality px-[50px] py-[10px] items-center gap-[227px]">
           <div className="font-medium text-[20.68px] leading-[31.02px]">
@@ -42,13 +42,14 @@ const CartProductDetails: React.FC = () => {
         </div>
       </div>
 
-      <div className="basis-2/5 border border-border2">
-        <div className=" bg-quality py-[10px] flex flex-col items-center justify-center">
+      <div className="basis-2/5 ">
+      <div className="border border-border2">
+        <div className=" bg-quality py-[12.5px] xl:px-[162px] flex flex-col items-center justify-center">
           <div className="font-medium text-[20.68px] leading-[31.02px]">
             Cart Total
           </div>
         </div>
-        <div className="px-[43.5px] py-[23px] flex flex-col gap-[29px]">
+        <div className="px-[43.5px] py-[21px] flex flex-col gap-[29px]">
           <div className="flex flex-col gap-[33px]">
             <div className="flex items-center justify-between border-b border-borderGrey font-medium text-[19.68px] leading-[29.52px] pb-[20px]">
               <div>Subtotal</div>
@@ -56,13 +57,14 @@ const CartProductDetails: React.FC = () => {
             </div>
 
             <div className="pb-[33px] border-b border-borderGrey">
-              <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between p-[20px]">
+              <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between 
+              pt-[14.5px] pb-[11px] pl-[23px] pr-[20px]">
                 <div>Enter coupon code</div>
                 <button>Apply</button>
               </div>
             </div>
 
-            <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between p-[20px]">
+            <div className="rounded-[20px] overflow-hidden border border-lightBorder flex items-center justify-between pt-[14.5px] pb-[11px] pl-[23px] px-[23px]">
               <div>Country</div>
               <button>
                 <ArrowDown2 />
@@ -79,6 +81,7 @@ const CartProductDetails: React.FC = () => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

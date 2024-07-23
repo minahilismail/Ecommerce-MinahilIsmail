@@ -18,6 +18,6 @@ const Star: React.FC<STAR_RATING> = ({ stars }) => {
       </span>
     );
   });
-  return <div className="flex gap-[10px]">{ratingStar}</div>;
+  return <div className="flex gap-[10.82px]">{ratingStar}</div>;
 };
 export default Star;

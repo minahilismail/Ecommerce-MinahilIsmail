@@ -1,37 +1,37 @@
 import cannonCamera from "../../assets/images/cannonCamera.png";
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-around md:gap-[100px] lg:gap-[477px] bg-white sm:rounded-lg mt-8">
-      <div className="w-full md:w-auto py-5 flex items-center justify-between mx-auto">
-        <div className="w-full flex flex-col md:items-start items-center justify-center mx-6">
+    <div className="pl-[174px] lg:pr-[146px] md:pr-[100px] flex flex-col-reverse md:flex-row items-center justify-center md:justify-normal md:gap-[100px] lg:gap-[449px] bg-white sm:rounded-lg mt-[38px]">
+      <div className="w-full md:w-auto flex items-center justify-between">
+        <div className="w-full flex flex-col md:items-start items-center justify-center mx-6 lg:mx-0">
           <div className="">
-            <div className="block md:hidden text-[36px] md:text-[43px] leading-9 text-secondary text-center font-extrabold">
+            <div className="block md:hidden text-[36px] md:text-[43px] leading-9 text-secondary text-center font-bold">
               Canon camera
             </div>
-            <div className="hidden md:block text-[36px] md:text-[43px] leading-[64.5px] text-secondary font-extrabold">
+            <div className="hidden md:block text-[36px] md:text-[43px] leading-[64.5px] text-secondary font-bold">
               <div>Canon</div>
               <div>camera</div>
             </div>
           </div>
 
-          <div className="w-full mt-5 flex flex-col text-center space-y-3 md:flex-row md:space-y-0 md:space-x-3 md:mx-0">
-            <button className="w-full md:w-auto items-center justify-center px-6 py-4 border border-transparent text-sm font-medium rounded-[15px] shadow-sm text-white bg-primary hover:bg-brandOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          <div className="w-full mt-[19px] flex flex-col gap-[21px] text-center space-y-3 md:flex-row md:space-y-0">
+            <button className="w-full md:w-auto items-center text-nowrap justify-center px-[32px] py-[18.5px] border border-transparent text-[16px] font-semibold rounded-[20px] shadow-sm text-white bg-primary hover:bg-brandOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Shop now
             </button>
-            <button className="w-full md:w-auto ml-0 md:ml-3 items-center justify-center px-6 py-4 border border-brandTeal text-sm rounded-[15px] font-medium shadow-sm text-brandTeal bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2">
+            <button className="w-full md:w-auto items-center text-nowrap justify-center px-[28.5px] py-[18.5px] border border-brandTeal text-[16px] rounded-[20px] font-semibold shadow-sm text-brandTeal bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2">
               View more
             </button>
           </div>
 
-          <div className="hidden md:flex gap-2  mt-[49px]">
-            <div className="h-[16px] w-[16px] border border-carouselDotsClr bg-primary rounded-full ml-[90px]"></div>
+          <div className="hidden md:flex gap-[8px] ml-[122px] mt-[49px]">
+            <div className="h-[16px] w-[16px] border border-carouselDotsClr bg-primary rounded-full"></div>
             <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
             <div className="h-[16px] w-[16px] border border-carouselDotsClr rounded-full "></div>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center">
-        <div className="mt-6 flex items-center mx-16">
+      <div className="flex items-center justify-center ">
+        <div className="flex items-center">
           <div className="relative flex-shrink-0">
             <img
               className="h-[250px] w-[210px] sm:h-[300px] sm:w-[270.16px] lg:h-[335px] lg:w-[345px] md:h-[310px] md:w-[290px] items-center object-contain"
