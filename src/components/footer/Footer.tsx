@@ -5,8 +5,8 @@ import { FOOTER_LINKS } from "../../constants/footerLinks";
 import { SOCIAL_ICONS } from "../../constants/socialIcons";
 const Footer: React.FC = () => {
   return (
-    <div className="bg-quality md:px-[60px] px-[19.5px] w-full py-[29px] md:pb-[42px] md:pt-[42px] mt-[60px]">
-      <div className="bg-white md:py-[38px] py-[14px] md:px-[95.5px] px-[24px] rounded-[20px] flex flex-col md:flex-row items-center md:justify-between justify-center gap-[12px] lg:gap-[137px] mb-[41px]">
+    <div className="bg-quality lg:px-[60px] px-[19.5px] w-full py-[29px] md:pb-[42px] md:pt-[42px] mt-[60px]">
+      <div className="bg-white md:py-[38px] py-[14px] lg:px-[95.5px] px-[24px] rounded-[20px] flex flex-col md:flex-row items-center md:justify-between justify-center gap-[12px] lg:gap-[137px] mb-[41px]">
         <div className="text-nowrap text-secondary font-bold md:text-[29.38px] text-[24px] md:leading-[44.07px] leading-[36px]">
           Subscribe newsletter
         </div>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-col px-[30px] md:flex-row justify-between gap-[23px] lg:gap-[80px] md:gap-0">
+      <div className="flex flex-col px-[30px] md:flex-row justify-between gap-[23px] lg:gap-[80px] md:gap-[20px]">
         <div className="flex flex-col gap-[36px]">
           <div className="flex flex-col gap-[41px]">
             <img

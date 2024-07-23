@@ -20,8 +20,8 @@ const Categories: React.FC = () => {
   ] = useFetchMultiFilteredProducts("/products");
   if (isLoading || isError) return <Loader />;
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-[20px] mr-[64.4px] ml-[61px] mt-[103px] mb-[58.01px]">
-      <div className="lg:basis-1/4 md:basis-1/5 space-y-[12px] mb-[13px]">
+    <div className="flex flex-col lg:flex-row lg:gap-[20px] lg:mr-[64.4px] lg:ml-[61px] mx-6 md:mt-[103px] mt-[30px] mb-[58.01px]">
+      <div className="lg:basis-1/4 md:basis-1/5 space-y-[12px] mb-[30px] md:mb-[13px]">
         <div className="flex items-center justify-between">
           <div className="text-navColor text-[16.09px] font-medium leading-[24.14px]">
             Categories

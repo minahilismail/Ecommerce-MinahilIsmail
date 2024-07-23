@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const BreadCrumb: React.FC = () => {
     
     return (
-        <div className="py-[26px] pl-[63px]">
+        <div className="py-[26px] pl-[30px] md:pl-[63px]">
         <div className="flex gap-[14px]">
         <div className="flex gap-[16px]">
             <Link className="text-[16px] font-medium text-breadCrumClr cursor-pointer" to={"/"}>Home</Link>

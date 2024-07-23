@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
         </div>
       </div>
       <div className="bg-navColor w-full top-[74px] sticky md:px-[67.79px] md:py-[21px] px-[20.79px] py-[16px]">
-        <div className="">
+  
           <div className="flex justify-between items-center gap-[24px]">
-            <div className="flex gap-[85px] items-center">
+            <div className="flex lg:gap-[85px] items-center">
               <Link to={"/"} className="flex items-center justify-center md:w-[140px] w-[145px] h-[38px] md:h-[39px]">
                 <img
                   className="md:w-[140px] w-[100.5px] h-[28px] md:h-[39px] cursor-pointer object-contain"
@@ -49,10 +49,10 @@ const Navbar: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center">
+  
               <div className="flex items-center gap-[29px]">
                 <div className="flex items-center cursor-pointer gap-[12px]">
-                  <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer  transition-all duration-200">
+                  <div className=" rounded-full text-white text-3xl w-8 h-8 flex items-center justify-center cursor-pointer transition-all duration-200">
                     <User />
                   </div>
                   <div className="text-white hidden md:flex">Sign in</div>
@@ -83,9 +83,9 @@ const Navbar: React.FC = () => {
                   <div className="text-white hidden md:flex">Cart</div>
                 </Link>
               </div>
-            </div>
+           
           </div>
-        </div>
+   
       </div>
     </div>
   );
