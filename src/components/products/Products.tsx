@@ -23,8 +23,8 @@ const Products: React.FC = () => {
   }
 
   return (
-    <div className="lg:mx-[63px] mt-[22px] mb-[100.25px]  ">
-      <div className="flex flex-col lg:flex-row lg:gap-[49px] items-center justify-center lg:items-start mx-6">
+    <div className="xxl:mx-[63px] lg:mx-[33px] mt-[22px] mb-[100.25px] mx-6 ">
+      <div className="flex flex-col md:flex-row lg:gap-[49px] md:gap-[20px] items-center md:items-start justify-center lg:items-start">
         <div className="lg:basis-1/2">
           <img
             className="object-contain lg:h-[500px] lg:w-[630px] md:h-[340px] md:w-[350px] h-[150px] w-[190px]"
@@ -107,14 +107,14 @@ const Products: React.FC = () => {
             </div>
             </div>
 
-            <div className="flex md:mx-0 flex-col md:flex-row items-center md:gap-[29px] gap-6 md:justify-between">
+            <div className="flex flex-col md:flex-row items-center md:gap-[29px] gap-6 md:justify-between">
               <button
                 onClick={() => addToCart(product)}
-                className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center md:px-[30px] py-[19.5px] font-semibold"
+                className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center md:px-[30px] lg:px-[56px] py-[19.5px]  font-semibold"
               >
                 Add to cart
               </button>
-              <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center md:px-[30px] py-[19.5px] font-semibold">
+              <button className="rounded-[32.42px] w-full md:w-auto bg-primary text-white text-[20.7px] leading-[31.05px] flex items-center justify-center md:px-[30px] lg:px-[61.5px] py-[19.5px] font-semibold">
                 Buy it now
               </button>
               <button className="hidden lg:flex relative mb-24 ">
@@ -155,7 +155,7 @@ const Products: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex mx-6 md:mx-0 md:gap-[20px] gap-[10px] items-center md:justify-center justify-start mt-[75px] mb-[35px]">
+      <div className="flex md:gap-[20px] gap-[10px] items-center justify-center mt-[75px] mb-[35px]">
         <button className="md:rounded-[15px] rounded-[10px] text-descColor text-[15.68px] md:text-[20.68px] leading-[31.02px] flex items-center justify-center font-medium md:px-[34px] md:py-[14.5px] px-[10px] py-[5px] border border-borderClr4">
           Description
         </button>
@@ -164,7 +164,7 @@ const Products: React.FC = () => {
         </button>
       </div>
 
-      <div className="md:mb-[64px] mx-6 md:mx-0 mb-[10px] border rounded-[20px] border-borderClr5 md:py-[42.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
+      <div className="md:mb-[64px] mb-[10px] border rounded-[20px] border-borderClr5 md:py-[42.5px] md:px-[49px] py-[15.5px] px-[29px] space-y-[17px]">
         <div>Customer reviews</div>
         <div>No reviews yet</div>
         <button className="bg-navColor text-white underline flex items-center justify-center px-[20px] py-[5px]">
@@ -172,7 +172,7 @@ const Products: React.FC = () => {
         </button>
       </div>
 
-      <div className="mx-6 md:mx-0"><RelatedProducts category={product.category}/></div>
+      <div className=""><RelatedProducts category={product.category}/></div>
     </div>
   );
 };

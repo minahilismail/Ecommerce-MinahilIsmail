@@ -20,7 +20,7 @@ function WishlistPage() {
   return (
     <>
       <div
-        className="mx-[64.4px] mt-10 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10
+        className="lg:mx-[64.4px] mx-6 mt-10 grid xxl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10
        justify-center"
       >
         {products.map((product) => (

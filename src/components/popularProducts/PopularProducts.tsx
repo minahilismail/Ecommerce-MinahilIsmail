@@ -18,8 +18,8 @@ const PopularProducts: React.FC = () => {
   if (isLoading || isError) return <Loader />;
 
   return (
-    <div className="mx-6 md:mx-0">
-      <div className="lg:grid lg:grid-cols-2 flex flex-col lg:mx-[61px]">
+    <div className="mx-6">
+      <div className="lg:grid lg:grid-cols-2 flex flex-col">
       <h1 className="text-secondary text-[27.38px] font-semibold mb-[16px] md:mb-[53px]">
         Popular products
       </h1>
@@ -36,9 +36,10 @@ const PopularProducts: React.FC = () => {
             <div
               onClick={() => handleFilterButtonClick(category)}
               key={index}
-              className="py-[10px] md:m-0 mb-[32px] px-[30.5px] max-x-[139px] h-[45px] cursor-pointer flex items-center justify-center text-secondary text-[16.38px] leading-[24.57px] font-medium border border-borderClr3 overflow-hidden text-ellipsis truncate shadow-lg rounded-[20px]"
+              className="py-[10px] lg:m-0 mb-[32px] px-[30.5px] max-x-[139px] h-[45px] cursor-pointer flex items-center justify-center text-secondary text-[16.38px] leading-[24.57px] font-medium border border-borderClr3 overflow-hidden text-ellipsis truncate shadow-lg rounded-[20px]"
             >
-              {category}
+              <div className="max-w-[68px] truncate text-ellipsis">{category}</div>
+              
             </div>
           ))}
         </Carousel>
@@ -46,7 +47,7 @@ const PopularProducts: React.FC = () => {
       </div>
       </div>
       
-      <div className="grid xl:grid-cols-4 items-center lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26.56px] md:ml-[64.01px] md:mr-[61px]">
+      <div className="grid xl:grid-cols-4 items-center lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26.56px] xxl:ml-[64.01px] xxl:mr-[61px]">
         {filteredItems?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

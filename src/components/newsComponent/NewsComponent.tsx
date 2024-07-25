@@ -16,7 +16,7 @@ const NewsComponent: React.FC = () => {
         </div>
         <div className="text-secondary text-[20.38px] leading-[30.57px] font-medium">View all</div>
       </div>
-      <div className="mx-[7px] lg:mx-[60px]">
+      <div className="mx-[17px]  xxl:mx-[60px]">
       <Slider
         {...SETTINGS}
         className="flex gap-[20px]"
@@ -26,15 +26,15 @@ const NewsComponent: React.FC = () => {
             key={index}
             className=" border border-reviewBorder rounded-[20px] md:px-[16.5px] px-[11.5px] md:py-[34.5px] py-[21px] md:mb-[40px] mb-[43px]"
           >
-            <div className="lg:flex gap-[34px]">
+            <div className="xl:flex gap-[34px]">
               <img
-                className="rounded-[20px] h-[288px] w-full object-contain"
+                className="rounded-[20px] h-[288px] xxl:h-[288px] md:h-[250px] w-full object-contain"
                 src={news.image}
                 alt={news.title}
               />
 
               <div className="text-secondary md:mx-0 mx-[26.5px]">
-                <div className=" border border-borderClr7 rounded-[20px] flex items-center justify-center w-[147px] h-[41px] text-[20.38px] font-medium md:mt-0 mt-[34px]">
+                <div className=" border border-borderClr7 rounded-[20px] flex items-center justify-center w-[147px] h-[41px] text-[20.38px] font-medium xl:mt-0 mt-[34px]">
                   {news?.date}
                 </div>
                 <div className="mt-2 text-[16px] font-semibold">

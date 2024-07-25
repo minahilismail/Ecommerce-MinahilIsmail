@@ -7,7 +7,7 @@ import { REVIEWS, SETTINGS } from "../../constants/review";
 
 const ReviewCarousel: React.FC = () => {
   return (
-    <div className="md:ml-[61px] md:mr-[60.63px] mx-[22px]">
+    <div className="xxl:ml-[61px] xxl:mr-[60.63px] mx-[22px]">
     <Slider
       {...SETTINGS}
       className="flex gap-[10px] items-center"

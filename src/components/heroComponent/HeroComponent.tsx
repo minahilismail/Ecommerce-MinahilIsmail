@@ -1,7 +1,7 @@
 import cannonCamera from "../../assets/images/cannonCamera.png";
 const Home: React.FC = () => {
   return (
-    <div className="lg:pl-[174px] lg:pr-[146px] md:pr-[100px] flex flex-col-reverse md:flex-row items-center justify-center md:justify-normal md:gap-[100px] lg:gap-[449px] bg-white sm:rounded-lg mt-[42px] md:mt-[38px] mx-6 lg:mx-0 ">
+    <div className="xxl:pl-[174px] xxl:mx-0 lg:pl-[80px] xxl:pr-[146px] lg:pr-[50px] md:pr-[100px] flex flex-col-reverse md:flex-row items-center justify-center md:justify-normal lg:justify-between md:gap-[145px] xxl:gap-[449px]  bg-white sm:rounded-lg mt-[42px] md:mt-[38px] mx-6 ">
       <div className="w-full md:w-auto flex items-center justify-between">
         <div className="w-full flex flex-col md:items-start items-center justify-center">
           <div className="">

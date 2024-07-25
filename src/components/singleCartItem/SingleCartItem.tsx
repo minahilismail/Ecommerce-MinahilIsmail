@@ -20,7 +20,7 @@ const SingleCartItem: React.FC = () => {
                 alt=""
               />
               <div className="text-nowrap flex flex-col gap-[11px]">
-                <div className="font-semibold text-wrap text-ellipsis text-[20.68px] max-h-16  max-w-32 truncate leading-[31.02px] text-navColor">
+                <div className="font-semibold text-wrap text-ellipsis text-[20.68px] max-h-16 max-w-32 truncate leading-[31.02px] text-navColor">
                   {product?.title}
                 </div>
                 <div>Color: Green</div>

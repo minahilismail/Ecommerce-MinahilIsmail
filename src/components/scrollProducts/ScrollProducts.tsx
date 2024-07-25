@@ -69,7 +69,7 @@ const ScrollableProducts: React.FC = () => {
   };
 
   return (
-    <div className="mx-6 lg:mx-[109px] md:mb-[78px] mb-[32px] md:mt-[52px] mt-[32px]">
+    <div className="mx-6 xxl:mx-[109px] lg:mx-[70px] md:mb-[78px] mb-[32px] md:mt-[52px] mt-[32px]">
       <Carousel className="flex gap-[39px]"
         responsive={responsive}
         customRightArrow={<CustomRightArrow />}

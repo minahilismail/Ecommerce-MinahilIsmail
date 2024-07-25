@@ -9,7 +9,7 @@ const BrandsSponsor: React.FC = () => {
   const brands = [brand8, brand4, brand5, brand6, brand7];
 
   return (
-    <div className="md:py-[47.38px] md:px-[32.5px] py-[46.92px] px-[84.42px] bg-quality md:rounded-[20px] flex md:flex-row flex-col gap-[55.3px] items-center justify-center mb-[24px] md:mb-[101px] lg:ml-[60px] lg:mr-[63px] md:mx-[30px] md:mt-[54px]">
+    <div className="md:py-[47.38px] md:px-[32.5px] py-[46.92px] px-[84.42px] bg-quality md:rounded-[20px] flex md:flex-row flex-col gap-[55.3px] items-center justify-center mb-[24px] md:mb-[101px] xxl:ml-[60px] xxl:mr-[63px] md:mx-[30px] md:mt-[54px]">
       {brands.map((brand, index) => (
         <div key={index}>
           <img
