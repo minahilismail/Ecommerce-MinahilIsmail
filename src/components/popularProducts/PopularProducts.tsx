@@ -18,8 +18,8 @@ const PopularProducts: React.FC = () => {
   if (isLoading || isError) return <Loader />;
 
   return (
-    <div className="mx-6">
-      <div className="lg:grid lg:grid-cols-2 flex flex-col">
+    <div className="mx-6 lg:mx-0 xl:mx-6 xxl:mx-0">
+      <div className="lg:grid lg:grid-cols-2 flex flex-col xxl:mx-[61px] lg:mx-[30px]">
       <h1 className="text-secondary text-[27.38px] font-semibold mb-[16px] md:mb-[53px]">
         Popular products
       </h1>
@@ -47,7 +47,7 @@ const PopularProducts: React.FC = () => {
       </div>
       </div>
       
-      <div className="grid xl:grid-cols-4 items-center lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26.56px] xxl:ml-[64.01px] xxl:mr-[61px]">
+      <div className="grid xl:grid-cols-4 items-center lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[26.56px] gap-y-[30.49px] xxl:ml-[64.01px] xxl:mr-[61px]">
         {filteredItems?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
