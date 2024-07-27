@@ -38,8 +38,8 @@ const Home: React.FC = () => {
               src={cannonCamera}
               alt="Canon camera"
             />
-            <div className="absolute left-36 bottom-6 lg:left-60 lg:bottom-12 md:left-[190px] md:bottom-[35px] rounded-[588.94px] md:w-[104.83px] md:h-[100.12px] xxl:w-[120px] xxl:h-[114.61px] sm:w-[99.83px] sm:h-[95.12px] w-[104.83px] h-[100.12px] bg-primary">
-              <div className="text-[15px] sm:text-[21.57px] top-6 relative leading-12 text-white text-center items-center justify-center font-semibold">
+            <div className="absolute px-[31.42px] py-[22.06px] xxl:px-[36px] xxl:py-[25.3px] flex items-center justify-center left-36 bottom-6 lg:left-60 lg:bottom-12 md:left-[190px] md:bottom-[35px] rounded-[588.94px] md:w-[104.83px] md:h-[100.12px] xxl:w-[120px] xxl:h-[114.61px] sm:w-[99.83px] sm:h-[95.12px] w-[104.83px] h-[100.12px] bg-primary">
+              <div className="text-[18.85px] sm:text-[21.57px] top-1 relative leading-12 text-white text-center items-center justify-center font-semibold">
                 <div>only</div>
                 <div>$89</div>
               </div>
