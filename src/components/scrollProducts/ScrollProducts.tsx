@@ -49,7 +49,7 @@ const ScrollableProducts: React.FC = () => {
   const CustomRightArrow: React.FC<ArrowProps> = ({ onClick }) => {
     return (
       <button
-        className="hidden md:block absolute -right-2 top-20 transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
+        className="hidden md:block absolute -right-2 top-[75px] transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
         onClick={onClick}
       >
         <ArrowRight size="24" />
@@ -60,7 +60,7 @@ const ScrollableProducts: React.FC = () => {
   const CustomLeftArrow: React.FC<ArrowProps> = ({ onClick }) => {
     return (
       <button
-        className="hidden md:block absolute -left-3 top-20 transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
+        className="hidden md:block absolute -left-3 top-[75px] transform -translate-y-1/2 z-10 bg-creamClr p-2 rounded-full w-[37px] h-[37px]"
         onClick={onClick}
       >
         <ArrowLeft size="24" />

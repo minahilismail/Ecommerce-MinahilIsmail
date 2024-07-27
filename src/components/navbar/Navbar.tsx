@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       <div className="bg-navColor w-full top-[74px] sticky lg:px-[31px] xxl:px-[67.79px] md:py-[22px] px-[20.79px] py-[16px]">
         <div className="flex justify-between items-center gap-[24px]">
           <div className="flex lg:gap-[85px] items-center">
-            <Link to={"/"} className="flex items-center justify-center md:w-[140px] w-[145px] h-[38px] md:h-[39px]">
+            <Link to={"/"} className="flex items-center justify-center md:w-[140px]  md:h-[39px]">
               <img
                 className="md:w-[140px] w-[100.5px] h-[28px] md:h-[39px] cursor-pointer object-contain"
                 src={logo}

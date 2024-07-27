@@ -16,7 +16,7 @@ const NewsComponent: React.FC = () => {
         </div>
         <div className="text-secondary text-[20.38px] leading-[30.57px] font-medium">View all</div>
       </div>
-      <div className="mx-[17px]  xxl:mx-[60px]">
+      <div className="mx-[17px] xxl:mx-[60px]">
       <Slider
         {...SETTINGS}
         className="flex gap-[20px]"
