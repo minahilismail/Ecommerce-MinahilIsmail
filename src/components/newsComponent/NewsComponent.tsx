@@ -37,7 +37,7 @@ const NewsComponent: React.FC = () => {
                 <div className=" border border-borderClr7 rounded-[20px] flex items-center justify-center w-[147px] h-[41px] text-[20.38px] font-medium xl:mt-0 mt-[34px]">
                   {news?.date}
                 </div>
-                <div className="mt-2 text-[16px] font-semibold text-nowrap">
+                <div className="mt-2 text-[16px] font-semibold text-nowrap xxl:text-wrap">
                   {news?.title}
                 </div>
                 <div className="mt-[16px] text-[14px] text-navColor">
