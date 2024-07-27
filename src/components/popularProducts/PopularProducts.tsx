@@ -18,7 +18,7 @@ const PopularProducts: React.FC = () => {
   if (isLoading || isError) return <Loader />;
 
   return (
-    <div className="mx-6 lg:mx-0 xl:mx-6 xxl:mx-0">
+    <div className="mx-6 lg:mx-6 xxl:mx-0">
       <div className="lg:grid lg:grid-cols-2 flex flex-col xxl:mx-[61px] lg:mx-[30px]">
       <h1 className="text-secondary text-[27.38px] font-semibold mb-[16px] md:mb-[53px]">
         Popular products
